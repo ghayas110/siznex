@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+background-color: #0a0a0a;
+color: #ededed;
 }
 
 @theme inline {
@@ -23,4 +23,56 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-create {
+  background-image: url('/create.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-collaborate {
+  background-image: url('/col.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-disrupt {
+  background-image: url('/disrupt.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pan-text {
+  transform: translateX(0px);
+}
+
+
+
+.pan-text {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.swiper-button-prev-custom, .swiper-button-next-custom {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.swiper-button-prev, .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  width: 48px;
+  height: 48px;
+  z-index: 20;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-button-next {
+  right: 0;
 }
