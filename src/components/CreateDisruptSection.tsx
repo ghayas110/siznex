@@ -14,8 +14,12 @@ const CreateDisruptSection = () => {
   const [activeBg, setActiveBg] = useState('');
 
   return (
-    <div className={clsx('transition-all duration-700 w-full', activeBg)}>
-      {/* Top 3 Sections with scroll and hover effect */}
+    <div
+      className={clsx(
+        'transition-all duration-700 w-full bg-cover bg-center',
+        activeBg
+      )}
+    >
       {sections.map((section, index) => {
         const { ref, inView } = useInView({
           triggerOnce: false,
@@ -27,17 +31,22 @@ const CreateDisruptSection = () => {
             key={section.label}
             ref={ref}
             onMouseEnter={() => setActiveBg(section.bg)}
-            onMouseLeave={() => setActiveBg('')}
+            onTouchStart={() => setActiveBg(section.bg)} // 👈 for mobile background change
             className={clsx(
               'min-h-64 border-t border-white flex items-center text-white transition-all duration-700',
               index === 2 && 'border-b',
-              index % 2 === 0 ? 'justify-start pl-24' : 'justify-end pr-24'
+              'px-6 sm:px-12 md:px-24',
+              index % 2 === 0
+                ? 'justify-start text-left'
+                : 'justify-end text-right'
             )}
           >
             <h2
               className={clsx(
-                'text-6xl md:text-7xl font-medium transform transition-all duration-700 ease-out',
-                inView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-50'
+                'text-4xl sm:text-5xl md:text-7xl font-medium transform transition-all duration-700 ease-out',
+                inView
+                  ? 'translate-x-0 opacity-100'
+                  : '-translate-x-10 opacity-50'
               )}
             >
               {section.label}
@@ -47,11 +56,11 @@ const CreateDisruptSection = () => {
       })}
 
       {/* Description Section */}
-      <div className="bg-transparent text-white flex flex-col md:flex-row justify-end px-12 py-12 space-y-8 md:space-y-0">
-        <p className="text-lg md:w-1/2 leading-relaxed">
+      <div className="bg-black/60 text-white flex flex-col md:flex-row justify-end px-6 sm:px-12 py-12 space-y-8 md:space-y-0">
+        <p className="text-base sm:text-lg md:w-1/2 leading-relaxed">
           A local DC digital design agency with global reach. At DesignInDC, we view clients as creative partners.
         </p>
-        <p className="text-lg md:w-1/2 leading-relaxed">
+        <p className="text-base sm:text-lg md:w-1/2 leading-relaxed">
           Together, we transform digital platforms through the fusion of diverse ideas.
         </p>
       </div>

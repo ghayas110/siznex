@@ -1,8 +1,9 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
-import Modal from './Modal'; // Import the Modal component
+import Modal from './Modal';
 import MenuModal from './MenuModal';
 
 const Header = () => {
@@ -19,31 +20,57 @@ const Header = () => {
   return (
     <>
       <header
-        className={`w-full fixed top-0 left-0 z-50 px-12 py-4 flex items-center justify-between transition-all duration-500 ease-in-out
+        className={`w-full fixed top-0 left-0 z-50 px-4 sm:px-8 md:px-12 py-4 flex items-center justify-between transition-all duration-500 ease-in-out
           ${scrolled ? 'bg-transparent backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-6'}`}
       >
-        <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : 'translate-x-8'}`}>
-          <Image src="/idc-logo-vertical.webp" alt="iDC Logo" className="h-20" width={100} height={100} />
+        {/* Logo */}
+        <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : 'translate-x-2'}`}>
+          <Image
+            src="/idc-logo-vertical.webp"
+            alt="iDC Logo"
+            className="h-16 w-auto"
+            width={100}
+            height={100}
+            priority
+          />
         </div>
-        {!scrolled && (
-          <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-            <button
-              className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Get in touch <ArrowUpRight size={16} />
-            </button>
-          </div>
-        )}
-        <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : '-translate-x-8'} text-white flex items-center gap-2`}>
-          <span>Menu</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+
+        {/* Get in touch button for desktop only */}
+        <div
+          className={`transition-all duration-500 ease-in-out hidden md:block ${
+            scrolled ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
+          }`}
+        >
+          <button
+            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Get in touch <ArrowUpRight size={16} />
+          </button>
+        </div>
+
+        {/* Menu button (always visible) */}
+        <div
+          onClick={() => setIsMenuOpen(true)}
+          className="text-white flex items-center gap-2 cursor-pointer"
+        >
+          <span className="text-sm md:text-base">Menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 6h16.5m-16.5 6h16.5" />
           </svg>
         </div>
       </header>
+
+      {/* Floating button for desktop only */}
       {scrolled && (
-        <div className="fixed bottom-4 left-4 z-50">
+        <div className="fixed bottom-4 left-4 z-50 hidden md:block">
           <button
             className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
             onClick={() => setIsModalOpen(true)}
@@ -52,8 +79,10 @@ const Header = () => {
           </button>
         </div>
       )}
+
+      {/* Modals */}
       {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
-      {isMenuOpen && <MenuModal onClose={() => setIsMenuOpen(false)} />}
+      {isMenuOpen && <MenuModal onClose={() => setIsMenuOpen(false)} openModal={() => setIsModalOpen(true)} />}
     </>
   );
 };

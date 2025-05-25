@@ -17,7 +17,7 @@ export default function HomePage() {
       <ClientsSection />
    
       <CallToActionSection />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
