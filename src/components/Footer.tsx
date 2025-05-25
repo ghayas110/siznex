@@ -40,12 +40,7 @@ const Footer = () => {
         {/* Right Column - Social & Info */}
         <div className="flex-1 text-right space-y-4">
           {/* Social Icons */}
-          <div className="flex justify-end gap-4 text-white text-base">
-            <a href="#" aria-label="Instagram">📸</a>
-            <a href="#" aria-label="Twitter">🐦</a>
-            <a href="#" aria-label="Facebook">📘</a>
-            <a href="#" aria-label="LinkedIn">💼</a>
-          </div>
+       
 
           {/* Contact Button */}
           <button className="bg-white text-black rounded-xl px-4 py-2 font-medium flex items-center justify-center gap-2 ml-auto">
@@ -54,13 +49,11 @@ const Footer = () => {
 
           {/* Address */}
           <div className="text-gray-400 text-xs leading-5">
-            1101 Connecticut Ave NW,<br />
-            Suite 450 #94<br />
-            Washington, DC 20036
+           
           </div>
 
           {/* Copyright */}
-          <div className="text-gray-500 text-xs mt-2">© 2025. DesignInDC. All Rights Reserved.</div>
+          <div className="text-gray-500 text-xs mt-2">© 2025. Siznex. All Rights Reserved.</div>
         </div>
       </div>
     </footer>

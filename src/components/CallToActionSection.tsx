@@ -29,12 +29,17 @@ const CallToActionSection = () => {
         </div>
 
         {/* CTA Button */}
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="mt-8 sm:mt-0 sm:absolute sm:bottom-8 sm:right-8 flex items-center justify-center bg-[#6563ff] text-white text-base sm:text-lg font-medium w-24 h-24 sm:w-32 sm:h-32 md:w-50 md:h-50 rounded-full hover:bg-indigo-600 transition-all duration-300"
-        >
-          Get started <ArrowUpRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-        </button>
+       <button
+  onClick={() => setIsModalOpen(true)}
+  className="mt-8 sm:mt-0 sm:absolute sm:bottom-8 sm:right-8 flex items-center justify-center 
+    w-14 h-14 text-sm font-medium rounded-full 
+    bg-[#6563ff] text-white hover:bg-indigo-600 
+    transition-all duration-300
+    sm:w-32 sm:h-32 sm:text-lg"
+>
+  <span className="hidden sm:inline">Get started</span>
+  <ArrowUpRight className="w-5 h-5 sm:ml-2" />
+</button>
       </div>
 
       {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}

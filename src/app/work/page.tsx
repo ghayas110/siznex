@@ -35,7 +35,7 @@ const projects = [
 	},
 	{
 		title: 'DowntownDC',
-		image: '/downtown-dc.jpg',
+		image: '/project02.webp',
 		category: 'Information Technology',
 		description: 'Mapping and urban analytics for local development.',
 	},
