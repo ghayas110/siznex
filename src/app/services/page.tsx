@@ -88,10 +88,17 @@ const servicesData = [
 export default function ServicesPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const updateWidth = () => setWindowWidth(window.innerWidth);
+    updateWidth(); // set initial width
+
     const handleScroll = () => {
       if (!sectionRef.current) return;
+
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const sectionHeight = sectionRef.current.offsetHeight;
@@ -109,12 +116,17 @@ export default function ServicesPage() {
       setScrollProgress(progress);
     };
 
+    window.addEventListener('resize', updateWidth);
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('resize', updateWidth);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
-  const maxTranslateX = (servicesData.length - 1) * window.innerWidth;
+  const maxTranslateX = windowWidth * (servicesData.length - 1);
   const translateX = -scrollProgress * maxTranslateX;
 
   const minFont = 18;
@@ -158,7 +170,7 @@ export default function ServicesPage() {
             }}
           >
             <div className="flex gap-4 sm:gap-8 whitespace-nowrap">
-              {servicesData.map((service, idx) => (
+              {servicesData.map((service) => (
                 <div
                   key={service.title}
                   className="text-white font-semibold transition-all duration-300"
