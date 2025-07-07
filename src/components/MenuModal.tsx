@@ -117,6 +117,7 @@ const MenuModal = ({
           <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <FaLinkedinIn className="cursor-pointer hover:text-white transition" />
           </a>
+          
         </div>
 
         {/* Careers */}

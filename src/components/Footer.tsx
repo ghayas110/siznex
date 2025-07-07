@@ -2,6 +2,9 @@
 
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import { FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa6';
+import { RiInstagramFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
@@ -40,17 +43,14 @@ const Footer = () => {
         {/* Right Column - Social & Info */}
         <div className="flex-1 text-right space-y-4">
           {/* Social Icons */}
-       
+        {/* Real social icons */}
+      <div className="flex justify-end items-center gap-4 mb-4">
+  <FaFacebook className="text-white text-2xl cursor-pointer hover:text-gray-400 transition-colors" onClick={() => window.open('https://www.facebook.com/share/1FjUEoA5ia/', '_blank')}/>
+      <RiInstagramFill className="text-white text-2xl cursor-pointer hover:text-gray-400 transition-colors" onClick={() => window.open('https://www.instagram.com/siznex_official/reels/', '_blank')}/>
+      <FaLinkedin className="text-white text-2xl cursor-pointer hover:text-gray-400 transition-colors" onClick={() => window.open('https://www.linkedin.com/company/siznex/', '_blank')}/>
+      </div>
+    
 
-          {/* Contact Button */}
-          <button className="bg-white text-black rounded-xl px-4 py-2 font-medium flex items-center justify-center gap-2 ml-auto">
-            Contact Us <ArrowUpRight size={14} />
-          </button>
-
-          {/* Address */}
-          <div className="text-gray-400 text-xs leading-5">
-           
-          </div>
 
           {/* Copyright */}
           <div className="text-gray-500 text-xs mt-2">© 2025. Siznex. All Rights Reserved.</div>
