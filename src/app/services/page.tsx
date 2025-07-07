@@ -69,20 +69,7 @@ const servicesData = [
       'Style Guides',
     ],
   },
-  {
-    title: 'Marketing',
-    image: 'https://designindc.com/wp-content/uploads/2023/02/marketing@2x.jpg',
-    link: 'https://designindc.com/services/marketing/',
-    items: [
-      'Strategy',
-      'Sales Consulting',
-      'Content Marketing',
-      'Email Campaigns',
-      'SEO',
-      'Paid Ads / PPC',
-      'Social Media',
-    ],
-  },
+
 ];
 
 export default function ServicesPage() {

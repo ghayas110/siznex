@@ -22,12 +22,7 @@ const blogPosts = [
     category: 'Design',
     image: '/project03.jpg',
   },
-  {
-    title: 'The Impact of AI on Modern Marketing',
-    date: 'Feb 18, 2024',
-    category: 'Marketing',
-    image: '/relaxation.jpg',
-  },
+
 ];
 
 export default function Blog() {
