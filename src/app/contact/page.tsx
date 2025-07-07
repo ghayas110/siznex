@@ -48,18 +48,20 @@ export default function ContactPage() {
           <div className="mb-6">
             <p className="text-xs text-gray-400 mb-1">Find us:</p>
             <p className="text-sm font-medium leading-snug">
-              1101 Connecticut Ave NW,<br />
-              Suite 450 #94<br />
-              Washington, DC 20036
+             7901 4th St N #7644, St. Petersburg, FL 33702, USA
             </p>
           </div>
           <div className="mb-6">
             <p className="text-xs text-gray-400 mb-1">Email us:</p>
-            <p className="text-sm font-medium">sales@designindc.com</p>
+            <p className="text-sm font-medium">contact@siznex.com</p>
           </div>
           <div>
             <p className="text-xs text-gray-400 mb-1">Call us:</p>
-            <p className="text-sm font-medium">202-931-7858</p>
+            <p className="text-sm font-medium">+1 727 264 0270</p>
+          </div>
+           <div>
+            <p className="text-xs text-gray-400 mb-1">Whatsapp:</p>
+            <p className="text-sm font-medium">+1 (437) 254-2512</p>
           </div>
         </div>
       </div>
