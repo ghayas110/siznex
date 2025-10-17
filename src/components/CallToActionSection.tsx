@@ -33,7 +33,7 @@ const CallToActionSection = () => {
   onClick={() => setIsModalOpen(true)}
   className="mt-8 sm:mt-0 sm:absolute sm:bottom-8 sm:right-8 flex items-center justify-center 
     w-14 h-14 text-sm font-medium rounded-full 
-    bg-[#6563ff] text-white hover:bg-indigo-600 
+    bg-blue-800 text-white hover:bg-indigo-600 
     transition-all duration-300
     sm:w-32 sm:h-32 sm:text-lg"
 >
