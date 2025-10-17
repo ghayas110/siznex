@@ -14,7 +14,7 @@ color: #ededed;
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffff ;
     --foreground: #ededed;
   }
 }
@@ -26,21 +26,21 @@ body {
 }
 
 .bg-create {
-  background-image: url('/create.webp');
+  background-image: url('/create.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .bg-collaborate {
-  background-image: url('/col.webp');
+  background-image: url('/col.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .bg-disrupt {
-  background-image: url('/disrupt.webp');
+  background-image: url('/disrupt.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

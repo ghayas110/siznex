@@ -26,7 +26,7 @@ const Header = () => {
         {/* Logo */}
         <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : 'translate-x-2'}`}>
           <Image
-            src="/idc-logo-vertical.webp"
+            src="/logo.webp"
             alt="iDC Logo"
             className="h-16 w-auto"
             width={100}
@@ -42,7 +42,7 @@ const Header = () => {
           }`}
         >
           <button
-            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full flex items-center gap-2"
             onClick={() => setIsModalOpen(true)}
           >
             Get in touch <ArrowUpRight size={16} />
@@ -52,7 +52,7 @@ const Header = () => {
         {/* Menu button (always visible) */}
         <div
           onClick={() => setIsMenuOpen(true)}
-          className="text-white flex items-center gap-2 cursor-pointer"
+          className="text-black flex items-center gap-2 cursor-pointer"
         >
        
           <svg
@@ -72,7 +72,7 @@ const Header = () => {
       {scrolled && (
         <div className="fixed bottom-4 left-4 z-50 hidden md:block">
           <button
-            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
             onClick={() => setIsModalOpen(true)}
           >
             Get in touch <ArrowUpRight size={16} />

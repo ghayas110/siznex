@@ -4,12 +4,12 @@ import React from 'react';
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white flex items-center justify-center px-4 sm:px-6 py-12 sm:py-24">
+    <div className="min-h-screen bg-white text-black flex items-center justify-center px-4 sm:px-6 py-12 sm:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full">
         {/* Left Form */}
         <div className="mt-16 sm:mt-0">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-2">Lets Talk!</h2>
-          <p className="text-sm text-gray-400 mb-8">
+          <p className="text-sm text-white mb-8">
             Fill out the following to get your project started
           </p>
           <form className="space-y-6 w-full max-w-md">
@@ -36,7 +36,7 @@ export default function ContactPage() {
             </div>
             <button
               type="submit"
-              className="mt-4 px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-gray-200 transition duration-300 text-sm"
+              className="mt-4 px-6 py-2 rounded-full bg-black text-white font-medium hover:bg-gray-900 transition duration-300 text-sm"
             >
               Submit →
             </button>
@@ -44,24 +44,24 @@ export default function ContactPage() {
         </div>
 
         {/* Right Contact Info Box */}
-        <div className="bg-[#2a2a2a] p-6 sm:p-8 rounded-md shadow-md w-full max-w-md mx-auto md:mx-0">
+        <div className="bg-blue-900 p-6 sm:p-8 rounded-md shadow-md w-full max-w-md mx-auto md:mx-0">
           <div className="mb-6">
-            <p className="text-xs text-gray-400 mb-1">Find us:</p>
-            <p className="text-sm font-medium leading-snug">
+            <p className="text-xs text-white mb-1">Find us:</p>
+            <p className="text-sm font-medium leading-snug text-white">
              7901 4th St N #7644, St. Petersburg, FL 33702, USA
             </p>
           </div>
           <div className="mb-6">
-            <p className="text-xs text-gray-400 mb-1">Email us:</p>
-            <p className="text-sm font-medium">contact@siznex.com</p>
+            <p className="text-xs text-white mb-1">Email us:</p>
+            <p className="text-sm text-white font-medium ">contact@siznex.com</p>
           </div>
           <div>
-            <p className="text-xs text-gray-400 mb-1">Call us:</p>
-            <p className="text-sm font-medium">+1 727 264 0270</p>
+            <p className="text-xs text-white mb-1">Call us:</p>
+            <p className="text-sm text-white font-medium">+1 727 264 0270</p>
           </div>
            <div>
-            <p className="text-xs text-gray-400 mb-1">Whatsapp:</p>
-            <p className="text-sm font-medium">+1 (437) 254-2512</p>
+            <p className="text-xs text-white mb-1">Whatsapp:</p>
+            <p className="text-sm text-white font-medium">+1 (437) 254-2512</p>
           </div>
         </div>
       </div>

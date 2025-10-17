@@ -54,7 +54,7 @@ export default function ProjectsSection() {
 	};
 
 	return (
-		<section className="py-12 lg:py-24 bg-[#222227] text-white featured-projects">
+		<section className="py-12 lg:py-24 bg-[#ffff] text-black featured-projects">
 			<div className="container flex flex-col items-center justify-center mx-auto px-4">
 				<h2 className="text-3xl lg:text-4xl font-semibold text-center mb-8 lg:mb-10">
 					Featured Projects
@@ -86,7 +86,7 @@ export default function ProjectsSection() {
 					<svg width="40" height="18" viewBox="0 0 40 18">
 						<path
 							d="M40 9H2M2 9l7-7M2 9l7 7"
-							stroke="#fff"
+							stroke="#000"
 							strokeWidth="2"
 							fill="none"
 						/>
@@ -108,13 +108,13 @@ export default function ProjectsSection() {
 					>
 						{projectSlides.map((project, index) => (
 							<SwiperSlide key={index}>
-								<div className="overflow-hidden whitespace-nowrap border-b border-[#333] mb-8">
+								<div className="overflow-hidden whitespace-nowrap border-b border-[#fff] mb-8">
 									<div className="marquee flex items-center animate-marquee">
 										{marqueeTags(projectSlides[activeIndex].tags).map(
 											(tag, i) => (
 												<span
 													key={i}
-													className="mx-4 text-sm uppercase tracking-wider text-gray-200"
+													className="mx-4 text-sm uppercase tracking-wider text-black font-medium"
 												>
 													{tag}
 												</span>
@@ -122,7 +122,7 @@ export default function ProjectsSection() {
 										)}
 									</div>
 								</div>
-								<div className="relative w-full aspect-[16/10] bg-black rounded-lg overflow-hidden flex items-end">
+								<div className="relative w-full aspect-[16/10] bg-white rounded-lg overflow-hidden flex items-end">
 									<Image
 										src={project.image}
 										alt={project.title}
@@ -153,7 +153,7 @@ export default function ProjectsSection() {
 					<svg width="40" height="18" viewBox="0 0 40 18">
 						<path
 							d="M0 9h38M38 9l-7-7M38 9l-7 7"
-							stroke="#fff"
+							stroke="#000"
 							strokeWidth="2"
 							fill="none"
 						/>

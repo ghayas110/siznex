@@ -27,12 +27,9 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <>
-      <Head>
-        <title>Blog – Design Inspired</title>
-      </Head>
+  
 
-      <div className="bg-black text-white min-h-screen mt-7">
+      <div className="text-black bg-white min-h-screen mt-7">
         <main className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
           {/* Featured Post */}
           <section className="mb-16">
@@ -77,6 +74,6 @@ export default function Blog() {
           </section>
         </main>
       </div>
-    </>
+  
   );
 }

@@ -12,7 +12,7 @@ const CallToActionSection = () => {
     <section className="relative w-full h-[60vh] overflow-hidden bg-black">
       {/* Background Image */}
       <Image
-        src="/bg-call.jpg"
+        src="/bg-call.png"
         alt="Call to Action Background"
         layout="fill"
         objectFit="cover"
