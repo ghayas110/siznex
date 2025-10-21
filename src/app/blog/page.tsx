@@ -13,7 +13,7 @@ const blogPosts = [
   {
     title: 'Web Design Trends to Embrace in 2024',
     date: 'March 25, 2024',
-    category: 'Web Design',
+    category: 'Web Design ',
     image: '/project02.webp',
   },
   {
