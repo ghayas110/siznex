@@ -56,7 +56,7 @@ const CreateDisruptSection = () => {
       })}
 
       {/* Description Section */}
-      <div className="bg-black/60 text-white flex flex-col md:flex-row justify-end px-6 sm:px-12 py-12 space-y-8 md:space-y-0">
+      <div className="bg-white/60 text-black flex flex-col md:flex-row justify-end px-6 sm:px-12 py-12 space-y-8 md:space-y-0">
         <p className="text-base sm:text-lg md:w-1/2 leading-relaxed">
           A local DC digital design agency with global reach. At DesignInDC, we view clients as creative partners.
         </p>

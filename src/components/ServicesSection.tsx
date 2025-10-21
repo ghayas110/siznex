@@ -54,7 +54,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="min-h-[700px] bg-black text-white">
+    <section className="min-h-[700px] bg-white text-black">
       {/* Header */}
       <div className="flex justify-between items-center px-6 sm:px-12 py-6 sm:py-8 border-b border-white sm:border-b-0">
         <h2 className="text-2xl sm:text-3xl font-semibold">What We Do</h2>
@@ -87,16 +87,16 @@ const ServicesSection = () => {
             className="relative group border border-gray-800 rounded-lg overflow-hidden h-[250px] lg:h-[500px]"
           >
             {/* Default Vertical Text */}
-            <p className="text-lg font-light transform rotate-90 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 whitespace-nowrap group-hover:opacity-0 transition-opacity duration-300">
+            <p className="text-lg text-black font-light transform rotate-90 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 whitespace-nowrap group-hover:opacity-0 transition-opacity duration-300">
               {service.title}
             </p>
 
             {/* Hover Content */}
             <div className="absolute inset-0 bg-blue-600 flex flex-col justify-center items-start px-6 py-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
               <ul className="space-y-1">
                 {service.details.map((detail, index) => (
-                  <li key={index} className="text-sm">
+                  <li key={index} className="text-sm text-white">
                     {detail}
                   </li>
                 ))}

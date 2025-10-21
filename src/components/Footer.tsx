@@ -8,16 +8,16 @@ import { RiInstagramFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 text-sm">
+    <footer className="bg-white text-black py-16 text-sm">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-12">
         {/* Left Column - Logo */}
         <div className="flex-1 flex justify-center md:justify-start">
-                    <Image src="/idc-logo-vertical.webp" alt="iDC Logo" className="h-20" width={100} height={100} />
+                    <Image src="/logo.webp" alt="iDC Logo" className="h-20" width={100} height={100} />
           
         </div>
 
         {/* Center Column - Links */}
-        <div className="flex-[2] grid grid-cols-2 gap-6 text-white">
+        <div className="flex-[2] grid grid-cols-2 gap-6 text-black">
           <ul className="space-y-2">
             {['Home', 'Work', 'Our Services', 'Our Team', 'Careers'].map((item) => (
               <li
@@ -53,7 +53,7 @@ const Footer = () => {
 
 
           {/* Copyright */}
-          <div className="text-gray-500 text-xs mt-2">© 2025. Siznex. All Rights Reserved.</div>
+          <div className="text-gray-500 text-xs mt-2">© 2025. XpertVA. All Rights Reserved.</div>
         </div>
       </div>
     </footer>

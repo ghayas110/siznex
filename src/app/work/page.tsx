@@ -98,11 +98,11 @@ export default function WorkPage() {
 	};
 
 	return (
-		<section className=" text-white overflow-hidden">
+		<section className=" text-black overflow-hidden ">
 			{/* Background Image */}
 			<div className="absolute top-0 inset-0 z-0">
 				<Image
-					src="/bg-work.jpg"
+					src="/bg-work.png"
 					alt="Work Background"
 					layout="fill"
 					objectFit="cover"
@@ -117,7 +117,7 @@ export default function WorkPage() {
 				{/* Heading Section */}
 				<div className="mb-12 pt-32 pl-8 md:pt-40 md:pl-20 text-left max-w-full">
 					<h1 className="text-4xl md:text-6xl font-light mb-4">Work</h1>
-					<p className="text-base md:text-xl text-gray-200 max-w-3xl">
+					<p className="text-base md:text-xl text-black max-w-3xl">
 						We follow a creative step-by-step process to transform your vision into reality by creating a digital identity that integrates diverse marketing elements to resonate with your target audience. Explore our work by clicking on a case study below.
 					</p>
 				</div>
@@ -140,7 +140,7 @@ export default function WorkPage() {
 								onClick={() => setActiveCategory(category)}
 								className={`text-sm font-medium whitespace-nowrap px-2 py-1 border-b-2 transition-all duration-300 ${
 									activeCategory === category
-										? 'border-white text-white'
+										? 'border-white text-black'
 										: 'border-transparent text-gray-400'
 								}`}
 							>

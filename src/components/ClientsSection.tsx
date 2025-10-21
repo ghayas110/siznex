@@ -59,7 +59,7 @@ const ClientsSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-[#13141A] text-white">
+    <section className="py-16 bg-[#fff] text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <h2 className="text-3xl sm:text-5xl font-semibold text-[#6563ff]">We love our clients</h2>

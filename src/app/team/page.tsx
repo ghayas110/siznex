@@ -52,7 +52,7 @@ export default function TeamPage() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <div className="text-white bg-black">
+    <div className="text-black bg-white min-h-screen">
       {/* Section 1: Stats & Video */}
       <section className="py-24 px-4 sm:px-6" ref={ref}>
         <h2 className="text-2xl sm:text-[2.2rem] md:text-[2.8vw] font-light mx-auto leading-tight mb-16 max-w-4xl text-center">
@@ -87,7 +87,7 @@ export default function TeamPage() {
       <section className="py-20 px-4 sm:px-6 flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Commitment To Diversity</h2>
-          <p className="text-gray-300 text-sm sm:text-base">
+          <p className="text-black text-sm sm:text-base">
             DesignInDC has an unwavering commitment to diversity. Unlike other agencies, our commitment is not rhetoric but rather a central component that makes up the essence of our company. Working with a diverse team, as it relates to age, gender, and ethnicity, has played a key role in our firm's success.
             <br /><br />
             As a creative agency, we believe not only in diversity as it relates to race, but diversity in thought. This is why we prioritize hiring talent from various backgrounds, ages, and genders, as it fosters different viewpoints and cultivates creative synergy.
