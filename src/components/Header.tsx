@@ -26,9 +26,9 @@ const Header = () => {
         {/* Logo */}
         <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : 'translate-x-2'}`}>
           <Image
-            src="/idc-logo-vertical.webp"
+            src="/logo.png"
             alt="iDC Logo"
-            className="h-16 w-auto"
+            className="h-25 w-auto"
             width={100}
             height={100}
             priority

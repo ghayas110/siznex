@@ -2,87 +2,23 @@
 
 import Image from 'next/image';
 import { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useInView } from "framer-motion";
+import { FaAngleRight } from "react-icons/fa";
 import CallToActionSection from '@/components/CallToActionSection';
+import { servicesList } from '@/data/services';
+import {
+  Lightbulb,
+  Palette,
+  Rocket,
+  Code,
+  ShoppingCart,
+  PenTool,
+  Cpu,
+  Globe,
+  Zap,
+} from "lucide-react";
+import { i } from 'framer-motion/client';
 
-const servicesData = [
-  {
-    title: 'Web Design & Development',
-    image: 'https://designindc.com/wp-content/uploads/2022/12/web-dev@2x.jpg',
-    link: 'https://designindc.com/services/web-design-development/',
-    items: [
-      'Web Design',
-      'Web Development',
-      'UI / UX Design',
-      'Corporate Web Design',
-      'Wordpress Development',
-      'E-commerce Web Development',
-      'Website Maintenance',
-      'Custom Web Design',
-    ],
-  },
-  {
-    title: 'App Development',
-    image: 'https://designindc.com/wp-content/uploads/2023/02/app-dev@2x.jpg',
-    link: 'https://designindc.com/services/app-development/',
-    items: [
-      'Web Applications',
-      'Mobile App Development',
-      'Intranet Portal Development',
-      'Custom CRM / CMS Development',
-      'API Integration',
-      'CRM Integration',
-      'Custom LMS Development',
-      'QA Testing',
-      'React Development',
-      'Laravel / PHP',
-      'Node.js',
-    ],
-  },
-  {
-    title: 'Videography & Photography',
-    image: 'https://designindc.com/wp-content/uploads/2023/02/media@2x.jpg',
-    link: 'https://designindc.com/services/videography-photography/',
-    items: [
-      'Pre-Production',
-      'Video Production',
-      'Post-Production',
-      'Animation',
-      'Motion Graphics',
-      '3D Rendering',
-      'Scripting',
-      'Product Photography',
-      'Headshots',
-    ],
-  },
-  {
-    title: 'Design & Branding',
-    image: 'https://designindc.com/wp-content/uploads/2023/02/design@2x.jpg',
-    link: 'https://designindc.com/services/design-branding/',
-    items: [
-      'UI / UX Design',
-      'Design Audit',
-      'Prototyping',
-      'Logo Design',
-      'Graphic Design',
-      'Product Design',
-      'Style Guides',
-    ],
-  },
-  {
-    title: 'Marketing',
-    image: 'https://designindc.com/wp-content/uploads/2023/02/marketing@2x.jpg',
-    link: 'https://designindc.com/services/marketing/',
-    items: [
-      'Strategy',
-      'Sales Consulting',
-      'Content Marketing',
-      'SEO',
-      'Paid Ads / PPC',
-      'Social Media',
-    ],
-  },
-];
 
 export default function ServicesPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -125,8 +61,6 @@ export default function ServicesPage() {
     };
   }, []);
 
-  const maxTranslateX = windowWidth * (servicesData.length - 1);
-  const translateX = -scrollProgress * maxTranslateX;
 
   const minFont = 18;
   const maxFont = 32;
@@ -159,83 +93,87 @@ export default function ServicesPage() {
         </div>
 
         {/* Carousel */}
-        <div ref={sectionRef} className="relative w-full h-[90vh] sm:h-[100vh]">
-          {/* Sticky Tabs */}
-          <div
-            className="sticky top-0 z-30 bg-black/90 backdrop-blur-md py-4 px-4 transition-all duration-300 overflow-x-auto no-scrollbar"
-            style={{
-              fontSize: `${fontSize}px`,
-              boxShadow: scrollProgress > 0.01 ? '0 2px 16px #000a' : 'none',
-            }}
-          >
-            <div className="flex gap-4 sm:gap-8 whitespace-nowrap">
-              {servicesData.map((service) => (
-                <div
-                  key={service.title}
-                  className="text-white font-semibold transition-all duration-300"
-                  style={{ fontSize: `${fontSize}px` }}
-                >
-                  {service.title}
-                </div>
-              ))}
-            </div>
-          </div>
+      
+{/* SERVICES — ANIMATED CARDS */}
+<section className="relative bg-black text-white py-28 px-4 md:px-20">
 
-          {/* Horizontal Scroll Area */}
-          <div className="absolute top-24 left-0 w-full h-[calc(100vh-6rem)] overflow-hidden">
-            <motion.div
-              className="flex h-full w-fit"
-              animate={{ x: translateX }}
-              transition={{ ease: 'easeInOut', duration: 0.3 }}
-              style={{ width: `${servicesData.length * 100}vw` }}
-            >
-              {servicesData.map((service, idx) => (
-                <div
-                  key={idx}
-                  className="w-screen h-full flex-shrink-0 flex items-center justify-center px-4 sm:px-12"
-                >
-                  <div className="flex flex-col sm:flex-row w-full max-w-6xl mx-auto items-center justify-between gap-6">
-                    <div className="flex-1 flex flex-col items-center sm:items-start">
-                      <div className="text-xl sm:text-3xl md:text-5xl font-light mb-4 sm:mb-6 text-center sm:text-left">
-                        {service.title}
-                      </div>
-                      <div className="relative w-full max-w-xs sm:max-w-sm aspect-[4/3] rounded-lg overflow-hidden shadow-lg mb-4 sm:mb-6">
-                        <Image src={service.image} alt={service.title} fill className="object-cover" />
-                      </div>
-                    </div>
-                    <div className="flex-1 flex flex-col items-start justify-center sm:pl-12 text-sm sm:text-base">
-                      <ul className="mb-4 space-y-1">
-                        {service.items.map((item, i) => (
-                          <li key={i} className="text-white/90">• {item}</li>
-                        ))}
-                      </ul>
-                      <a
-                        href={service.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-indigo-300 hover:text-white transition text-sm sm:text-base"
-                      >
-                        learn more
-                        <svg width={18} height={18} viewBox="0 0 18 18" fill="none">
-                          <path
-                            d="M5 13L13 5M13 5H6M13 5V12"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
+  {/* Soft top gradient */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#111] via-black to-black z-0 opacity-40"></div>
+
+  <div className="relative z-10 max-w-7xl mx-auto">
+
+    {/* Heading */}
+    <h2 className="text-white text-[4vw] sm:text-[3vw] md:text-[2.2vw] mb-4 font-light">
+      Our Professional Services
+    </h2>
+    <p className="text-gray-300 max-w-2xl mb-14">
+      A complete suite of digital solutions designed to grow your brand and business.
+    </p>
+
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      {servicesList.map((item, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="bg-[#111] border border-neutral-800 rounded-2xl p-8 hover:border-gray-600 transition-all hover:-translate-y-1 group shadow-md"
+        >
+          <item.icon className="w-12 h-12 text-blue-400 mb-5 group-hover:scale-110 transition-all" />
+          <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+          <p className="text-gray-400">{item.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+
+  </div>
+</section>
+{/* WHY CHOOSE US */}
+<section className="relative bg-black text-white py-24 px-4 md:px-20">
+
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-[4vw] sm:text-[3vw] md:text-[2.2vw] font-light mb-6">
+      Why Choose Us
+    </h2>
+    <p className="text-gray-300 max-w-2xl mx-auto mb-16">
+      We ensure premium quality, consistent communication, and real measurable results.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+
+      {[
+        { icon: Globe, title: "Global Expertise", desc: "We work with international clients across US, UK, UAE & Europe." },
+        { icon: Zap, title: "Fast & Reliable", desc: "Quick delivery, transparent reports, and tracked progress." },
+        { icon: Rocket, title: "Results Focused", desc: "Everything we do aims to grow your brand and revenue." },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2, duration: 0.5 }}
+          className="p-8 border border-neutral-800 rounded-2xl bg-[#0d0d0d] shadow-lg hover:border-gray-600 transition-all"
+        >
+          <item.icon className="w-12 h-12 mb-4 text-blue-400 mx-auto" />
+          <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+          <p className="text-gray-400 text-sm">{item.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+
+</section>
+
+
+
       </div>
+ 
+   
 
       <CallToActionSection />
     </section>
   );
 }
+// Professional Progress Bar Component

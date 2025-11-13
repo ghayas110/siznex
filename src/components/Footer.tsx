@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-12">
         {/* Left Column - Logo */}
         <div className="flex-1 flex justify-center md:justify-start">
-                    <Image src="/idc-logo-vertical.webp" alt="iDC Logo" className="h-20" width={100} height={100} />
+          <Image src="/logo.png" alt="iDC Logo" className="h-20" width={100} height={100} />
           
         </div>
 

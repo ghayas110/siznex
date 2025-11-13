@@ -48,20 +48,20 @@ export default function ContactPage() {
           <div className="mb-6">
             <p className="text-xs text-gray-400 mb-1">Find us:</p>
             <p className="text-sm font-medium leading-snug">
-             7901 4th St N #7644, St. Petersburg, FL 33702, USA
+             XpertVA, EnglishTown, New Jersey 07726, USA
             </p>
           </div>
           <div className="mb-6">
             <p className="text-xs text-gray-400 mb-1">Email us:</p>
-            <p className="text-sm font-medium">contact@siznex.com</p>
+            <p className="text-sm font-medium">hello@xpertva.com</p>
           </div>
           <div>
             <p className="text-xs text-gray-400 mb-1">Call us:</p>
-            <p className="text-sm font-medium">+1 727 264 0270</p>
+            <p className="text-sm font-medium">+17324906272</p>
           </div>
            <div>
             <p className="text-xs text-gray-400 mb-1">Whatsapp:</p>
-            <p className="text-sm font-medium">+1 (437) 254-2512</p>
+            <p className="text-sm font-medium">+17324906272</p>
           </div>
         </div>
       </div>
