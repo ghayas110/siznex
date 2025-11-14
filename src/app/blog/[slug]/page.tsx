@@ -2,11 +2,13 @@ import { blogPosts } from "@/data/blogPost";
 import Image from "next/image";
 
 interface BlogPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function BlogDetailPage({ params }: BlogPageProps) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogDetailPage({ params }: BlogPageProps) {
+  const { slug } = await params;
+
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return (
@@ -48,16 +50,20 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed">
           <p className="mb-6">{post.description}</p>
 
-          <h2 className="text-2xl font-semibold text-white mt-10">Why This Topic Matters</h2>
+          <h2 className="text-2xl font-semibold text-white mt-10">
+            Why This Topic Matters
+          </h2>
           <p className="text-gray-300 mt-3">
-            Understanding Amazon fundamentals helps sellers improve visibility, conversions,  
-            customer satisfaction, and long-term business performance.
+            Understanding Amazon fundamentals helps sellers improve visibility,
+            conversions, customer satisfaction, and long-term business performance.
           </p>
 
-          <h3 className="text-xl font-semibold text-white mt-10">Final Thoughts</h3>
+          <h3 className="text-xl font-semibold text-white mt-10">
+            Final Thoughts
+          </h3>
           <p className="text-gray-300 mt-3">
-            Stay consistent, optimize your product listings, learn marketplace trends,  
-            and keep refining your strategies to succeed on Amazon.
+            Stay consistent, optimize your product listings, learn marketplace
+            trends, and keep refining your strategies to succeed on Amazon.
           </p>
         </div>
 
