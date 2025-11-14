@@ -41,8 +41,8 @@ const processSteps: ProcessStep[] = [
       "We kick things off with discovery — learning about your users, business, and goals.",
     image: "/images/hero-app-1.svg",
     icon: Lightbulb,
-    gradient: "from-brand-orange/30 via-brand-orange/20 to-brand-orange/10",
-    accentColor: "brand-orange",
+    gradient: "from-orange-300/30 via-orange-300/20 to-orange-300/10",
+    accentColor: "orange-300",
     direction: "left",
   },
   {
@@ -127,7 +127,7 @@ function ProfessionalProgressBar({
         {/* Enhanced Progress Line Background */}
         <div className="w-0.5 md:w-1 h-80 md:h-96 lg:h-[420px] bg-gradient-to-b from-brand-border/40 via-brand-border/20 to-brand-border/40 rounded-full shadow-inner">
           <motion.div
-            className="w-full rounded-full bg-gradient-to-b from-brand-orange via-brand-orange/90 to-brand-orange/70 shadow-lg"
+            className="w-full rounded-full bg-gradient-to-b from-orange-300 via-orange-300/90 to-orange-300/70 shadow-lg"
             style={{
               boxShadow:
                 "0 0 20px rgba(217, 126, 27, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.1)",
@@ -170,9 +170,9 @@ function ProfessionalProgressBar({
               <motion.div
                 className={`relative w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full border-2 flex items-center justify-center z-10 backdrop-blur-sm ${
                   isActive
-                    ? "bg-brand-orange border-brand-orange text-brand-bg shadow-xl"
+                    ? "bg-orange-300 border-orange-300 text-brand-bg shadow-xl"
                     : isPassed
-                    ? "bg-brand-orange/20 border-brand-orange text-brand-orange shadow-lg"
+                    ? "bg-orange-300/20 border-orange-300 text-orange-300 shadow-lg"
                     : "bg-brand-bg/80 border-brand-border text-text-muted shadow-md"
                 }`}
                 animate={{
@@ -199,7 +199,7 @@ function ProfessionalProgressBar({
                 {/* Pulse effect for active step */}
                 {isActive && (
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-brand-orange"
+                    className="absolute inset-0 rounded-full border-2 border-orange-300"
                     animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
@@ -219,9 +219,9 @@ function ProfessionalProgressBar({
                 <motion.div
                   className={`text-xs md:text-sm font-bold font-grotesk ${
                     isActive
-                      ? "text-brand-orange"
+                      ? "text-orange-300"
                       : isPassed
-                      ? "text-brand-orange/80"
+                      ? "text-orange-300/80"
                       : "text-text-primary"
                   }`}
                   animate={{
@@ -398,7 +398,7 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <motion.div
-                className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 rounded-full bg-gradient-to-r from-brand-orange/15 to-brand-orange/10 border border-brand-orange/30 backdrop-blur-sm mb-6 md:mb-8 lg:mb-12 shadow-lg"
+                className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 rounded-full bg-gradient-to-r from-orange-300/15 to-orange-300/10 border border-orange-300/30 backdrop-blur-sm mb-6 md:mb-8 lg:mb-12 shadow-lg"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 40px rgba(217, 126, 27, 0.3)",
@@ -406,11 +406,11 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-brand-orange rounded-full animate-pulse" />
-                <span className="text-brand-orange font-semibold text-sm md:text-base lg:text-lg tracking-wide">
+                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-orange-300 rounded-full animate-pulse" />
+                <span className="text-orange-300 font-semibold text-sm md:text-base lg:text-lg tracking-wide">
                   Our Process
                 </span>
-                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-brand-orange rounded-full animate-pulse" />
+                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-orange-300 rounded-full animate-pulse" />
               </motion.div>
 
               <motion.h2
@@ -421,7 +421,7 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
               >
                 Product Development
                 <motion.span
-                  className="block bg-gradient-to-r from-brand-orange via-brand-orange to-brand-orange/80 bg-clip-text text-transparent"
+                  className="block bg-gradient-to-r from-orange-300 via-orange-300 to-orange-300/80 bg-clip-text text-transparent"
                   animate={{
                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   }}
@@ -442,17 +442,17 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
               >
                 From initial concept to ongoing support, we guide your product
                 through every stage of development with
-                <span className="text-brand-orange font-semibold">
+                <span className="text-orange-300 font-semibold">
                   {" "}
                   precision
                 </span>
                 ,
-                <span className="text-brand-orange font-semibold">
+                <span className="text-orange-300 font-semibold">
                   {" "}
                   expertise
                 </span>
                 , and
-                <span className="text-brand-orange font-semibold">
+                <span className="text-orange-300 font-semibold">
                   {" "}
                   innovation
                 </span>
@@ -469,11 +469,11 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                   Scroll to explore our process
                 </span>
                 <motion.div
-                  className="w-5 h-8 md:w-6 md:h-10 border-2 border-brand-orange/40 rounded-full flex justify-center relative overflow-hidden"
+                  className="w-5 h-8 md:w-6 md:h-10 border-2 border-orange-300/40 rounded-full flex justify-center relative overflow-hidden"
                   whileHover={{ borderColor: "rgba(217, 126, 27, 0.8)" }}
                 >
                   <motion.div
-                    className="w-0.5 md:w-1 h-2 md:h-3 bg-brand-orange rounded-full mt-1.5 md:mt-2"
+                    className="w-0.5 md:w-1 h-2 md:h-3 bg-orange-300 rounded-full mt-1.5 md:mt-2"
                     animate={{ y: [0, 12, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
@@ -482,13 +482,13 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
 
               {/* Mobile Navigation Controls */}
               <motion.div
-                className="mt-8 md:hidden flex flex-col items-center gap-4 bg-brand-bg/80 backdrop-blur-sm rounded-2xl p-6 border border-brand-orange/20"
+                className="mt-8 md:hidden flex flex-col items-center gap-4 bg-brand-bg/80 backdrop-blur-sm rounded-2xl p-6 border border-orange-300/20"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
               >
                 <div className="text-center">
-                  <h3 className="text-brand-orange font-semibold text-sm mb-1">
+                  <h3 className="text-orange-300 font-semibold text-sm mb-1">
                     Development Process
                   </h3>
                   <span className="text-text-muted text-xs">
@@ -507,8 +507,8 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                       }}
                       className={`px-4 py-3 rounded-xl text-xs font-medium transition-all duration-300 flex flex-col items-center gap-1 ${
                         activeStep === step.id
-                          ? "bg-brand-orange text-brand-bg shadow-lg scale-105"
-                          : "bg-brand-orange/10 text-brand-orange border border-brand-orange/30 hover:bg-brand-orange/20"
+                          ? "bg-orange-300 text-brand-bg shadow-lg scale-105"
+                          : "bg-orange-300/10 text-orange-300 border border-orange-300/30 hover:bg-orange-300/20"
                       }`}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -597,16 +597,16 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                           >
                             <Icon
                               className={`w-5 h-5 text-${
-                                step.accentColor === "brand-orange"
-                                  ? "brand-orange"
+                                step.accentColor === "orange-300"
+                                  ? "orange-300"
                                   : step.accentColor
                               }`}
                             />
                           </div>
                           <span
                             className={`text-xs md:text-sm font-bold tracking-wider ${
-                              step.accentColor === "brand-orange"
-                                ? "text-brand-orange"
+                              step.accentColor === "orange-300"
+                                ? "text-orange-300"
                                 : `text-${step.accentColor}`
                             }`}
                           >
@@ -664,7 +664,7 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                         {/* Enhanced CTA Button */}
                         <motion.div className="overflow-hidden hidden md:block">
                           <motion.button
-                            className="group inline-flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-brand-orange via-brand-orange to-brand-orange/90 text-brand-bg font-bold text-lg rounded-2xl shadow-xl relative overflow-hidden"
+                            className="group inline-flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-orange-300 via-orange-300 to-orange-300/90 text-brand-bg font-bold text-lg rounded-2xl shadow-xl relative overflow-hidden"
                             initial={{ y: 30, opacity: 0, scale: 0.9 }}
                             animate={{
                               y: isActive ? 0 : 30,
@@ -759,8 +759,8 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                           {/* Enhanced Floating Elements */}
                           <motion.div
                             className={`absolute top-6 right-6 w-24 h-24 bg-${
-                              step.accentColor === "brand-orange"
-                                ? "brand-orange"
+                              step.accentColor === "orange-300"
+                                ? "orange-300"
                                 : step.accentColor
                             }/20 rounded-full blur-2xl`}
                             animate={{
@@ -773,8 +773,8 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
 
                           <motion.div
                             className={`absolute bottom-6 left-6 w-16 h-16 bg-${
-                              step.accentColor === "brand-orange"
-                                ? "brand-orange"
+                              step.accentColor === "orange-300"
+                                ? "orange-300"
                                 : step.accentColor
                             }/15 rounded-full blur-xl`}
                             animate={{
@@ -825,10 +825,10 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                               />
                               {/* Fallback Icon */}
                               <div
-                                className="fallback-icon absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-orange/20 to-brand-orange/10 rounded-xl md:rounded-2xl border border-brand-orange/20"
+                                className="fallback-icon absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-300/20 to-orange-300/10 rounded-xl md:rounded-2xl border border-orange-300/20"
                                 style={{ display: "none" }}
                               >
-                                <Icon className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-brand-orange" />
+                                <Icon className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-orange-300" />
                               </div>
                             </div>
                           </motion.div>
@@ -861,7 +861,7 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
               return (
                 <motion.div
                   key={step.id}
-                  className="bg-gradient-to-br from-brand-bg via-brand-bg to-brand-bg/95 rounded-2xl p-6 border border-brand-orange/20"
+                  className="bg-gradient-to-br from-brand-bg via-brand-bg to-brand-bg/95 rounded-2xl p-6 border border-orange-300/20"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -869,13 +869,13 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-brand-orange/20 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-brand-orange" />
+                      <div className="w-12 h-12 rounded-full bg-orange-300/20 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-orange-300" />
                       </div>
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-bold text-brand-orange">
+                        <span className="text-xs font-bold text-orange-300">
                           {step.phase}
                         </span>
                       </div>
@@ -885,7 +885,7 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                       <p className="text-sm text-text-muted leading-relaxed mb-4">
                         {step.description}
                       </p>
-                      <div className="w-full h-32 bg-gradient-to-br from-brand-orange/10 to-brand-orange/5 rounded-xl flex items-center justify-center">
+                      <div className="w-full h-32 bg-gradient-to-br from-orange-300/10 to-orange-300/5 rounded-xl flex items-center justify-center">
                         <img
                           src={step.image}
                           alt={`${step.title} illustration`}
@@ -898,7 +898,7 @@ export function ProductDevelopmentProcessProfessional(): React.ReactElement {
                           }}
                         />
                         <div className="hidden w-24 h-24 items-center justify-center">
-                          <Icon className="w-12 h-12 text-brand-orange/60" />
+                          <Icon className="w-12 h-12 text-orange-300/60" />
                         </div>
                       </div>
                     </div>

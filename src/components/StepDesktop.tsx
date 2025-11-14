@@ -17,7 +17,7 @@ transition={{ duration: 0.6, ease: "easeOut" }}
 >
 {/* Text */}
 <div className="flex flex-col justify-center space-y-6">
-<motion.span className="text-sm text-brand-orange font-medium tracking-widest uppercase">
+<motion.span className="text-sm text-orange-300 font-medium tracking-widest uppercase">
 {active.phase}
 </motion.span>
 <motion.h3 className="text-5xl font-bold text-white leading-tight">

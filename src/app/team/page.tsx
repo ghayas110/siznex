@@ -111,15 +111,16 @@ export default function TeamPage() {
 
         <div className="flex flex-col sm:flex-row gap-14 justify-center">
           <div>
-            <Image src={AliZaidi} alt="Ali Zaidi" width={180} height={180} className="rounded-xl shadow-lg" />
+            {/* make image square */}
+            <Image src={"/alizaidi.jpeg"} alt="Ali Zaidi" width={180} height={180} className="rounded-xl shadow-lg " />
             <p className="mt-5 text-xl font-semibold">Ali Zaidi</p>
             <p className="text-gray-400 text-sm">CEO / Founder</p>
           </div>
 
           <div>
-            <Image src={EbraheemAzhar} alt="Ebraheem Azhar" width={180} height={180} className="rounded-xl shadow-lg" />
+            <Image src={"/Ebraheem.jpeg"} alt="Ebraheem Azhar" width={180} height={180} className="rounded-xl shadow-lg" />
             <p className="mt-5 text-xl font-semibold">Ebraheem Azhar</p>
-            <p className="text-gray-400 text-sm">COO / Co-Founder</p>
+            <p className="text-gray-400 text-sm">COO</p>
           </div>
         </div>
       </section>

@@ -36,7 +36,7 @@ export default function ProgressBar({ active, progress, visible }: Props) {
             <div className="relative h-[400px] w-[4px] rounded bg-white/10 overflow-hidden">
                 {/* Progress Line */}
                 <motion.div
-                    className="absolute left-0 top-0 w-full bg-brand-orange"
+                    className="absolute left-0 top-0 w-full bg-orange-300"
                     style={{ height: `${Math.min(progressNumber * 100, 100)}%` }}
                     transition={{ duration: 0.1 }}
                 />
@@ -56,7 +56,7 @@ export default function ProgressBar({ active, progress, visible }: Props) {
                         >
                             <motion.div
                                 className={`w-8 h-8 rounded-full flex items-center justify-center border backdrop-blur-sm shadow-sm
-                                ${isActive ? "bg-brand-orange text-white border-brand-orange" : isPast ? "bg-brand-orange/20 border-brand-orange" : "bg-white/10 border-white/20 text-white/60"}`}
+                                ${isActive ? "bg-orange-300 text-white border-orange-300" : isPast ? "bg-orange-300/20 border-orange-300" : "bg-white/10 border-white/20 text-white/60"}`}
                                 animate={{ scale: isActive ? 1.1 : 1 }}
                                 transition={{ duration: 0.25 }}
                             >

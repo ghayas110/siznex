@@ -11,7 +11,7 @@ export const servicesList: Service[] = [
     icon: Lightbulb, 
     title: "Virtual Assistant Services",  
     desc: "Amazon, eBay, Shopify & Walmart experts to manage your store end-to-end.",
-    slug: "virtual-assistant-services"
+    slug: "va"
   },
   { 
     icon: Rocket, 
@@ -27,20 +27,20 @@ export const servicesList: Service[] = [
   },
   { 
     icon: ShoppingCart, 
-    title: "E-Commerce Operations", 
+    title: "Amazon Operations", 
     desc: "Listings, optimization, product research & full store management.",
-    slug: "ecommerce-operations"
+    slug: "amazon-operation"
   },
   { 
     icon: PenTool, 
     title: "Content & Branding", 
     desc: "Brand identity, creative graphics, video editing & product photography.",
-    slug: "content-and-branding"
+    slug: "content-branding"
   },
   { 
     icon: Cpu, 
-    title: "Automation & AI", 
-    desc: "Automated workflows, AI chatbots, dashboards & lead funnels.",
-    slug: "automation-and-ai"
+    title: "Mobile App Development", 
+    desc: "Custom mobile apps for iOS and Android with user-focused design.",
+    slug: "mobile-app-development"
   },
 ];

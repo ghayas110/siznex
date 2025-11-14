@@ -34,7 +34,7 @@ animate={{ opacity: 1, y: 0, scale: 1 }}
 exit={{ opacity: 0, y: -40, scale: 0.96 }}
 transition={{ duration: 0.4, ease: "easeOut" }}
 >
-<div className="mb-4 text-brand-orange text-xs font-semibold tracking-wider">
+<div className="mb-4 text-orange-300 text-xs font-semibold tracking-wider">
 {steps[current].phase}
 </div>
 <h3 className="text-xl font-bold text-white mb-3">
@@ -60,7 +60,7 @@ className="w-40 h-40 object-contain drop-shadow-xl"
 key={i}
 onClick={() => goTo(i)}
 className={`h-2.5 w-2.5 rounded-full transition-all duration-300
-${i === current ? "bg-brand-orange scale-125" : "bg-white/30"}`}
+${i === current ? "bg-orange-300 scale-125" : "bg-white/30"}`}
 />
 ))}
 </div>

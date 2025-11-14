@@ -133,7 +133,7 @@ export default function ProductDevelopmentProcess() {
           >
             <div className="relative h-[420px] w-[4px] bg-white/10 rounded">
               <motion.div
-                className="absolute left-0 top-0 w-full bg-brand-orange"
+                className="absolute left-0 top-0 w-full bg-orange-300"
                 style={{ height: scrollYProgress }}
               />
 
@@ -149,7 +149,7 @@ export default function ProductDevelopmentProcess() {
                   >
                     <div
                       className={`w-8 h-8 flex items-center justify-center rounded-full border backdrop-blur-sm
-                      ${on ? "bg-brand-orange text-white" : "bg-white/10 text-white/40"}`}
+                      ${on ? "bg-orange-300 text-white" : "bg-white/10 text-white/40"}`}
                     >
                       <Icon className="w-4 h-4" />
                     </div>
@@ -177,7 +177,7 @@ export default function ProductDevelopmentProcess() {
                   return (
                     <>
                       <div className="flex flex-col justify-center space-y-6">
-                        <span className="text-sm text-brand-orange font-semibold uppercase tracking-widest">
+                        <span className="text-sm text-orange-300 font-semibold uppercase tracking-widest">
                           {step.phase}
                         </span>
                         <h3 className="text-5xl font-bold text-white">{step.title}</h3>
@@ -219,7 +219,7 @@ export default function ProductDevelopmentProcess() {
               transition={{ duration: 0.4 }}
               className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6 text-center shadow-lg"
             >
-              <div className="mb-3 text-brand-orange text-xs font-semibold tracking-wider">
+              <div className="mb-3 text-orange-300 text-xs font-semibold tracking-wider">
                 {processSteps[current].phase}
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{processSteps[current].title}</h3>
@@ -235,7 +235,7 @@ export default function ProductDevelopmentProcess() {
               <button
                 key={i}
                 onClick={() => goTo(i)}
-                className={`h-2.5 w-2.5 rounded-full transition-all ${i === current ? "bg-brand-orange scale-125" : "bg-white/30"}`}
+                className={`h-2.5 w-2.5 rounded-full transition-all ${i === current ? "bg-orange-300 scale-125" : "bg-white/30"}`}
               />
             ))}
           </div>

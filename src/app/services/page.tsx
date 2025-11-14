@@ -18,13 +18,14 @@ import {
   Zap,
 } from "lucide-react";
 import { i } from 'framer-motion/client';
+import { useRouter } from 'next/navigation';
 
 
 export default function ServicesPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
-
+  const [windowWidth, setWindowWidth] = useState(0)
+  const router = useRouter();
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -88,7 +89,7 @@ export default function ServicesPage() {
             We provide a full range of web services
           </h1>
           <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-3xl">
-            At DesignInDC, we take a 360° approach to our projects. A successful digital experience requires the seamless integration of multiple elements, which is why our agency offers an array of services, from interface design to custom photography to digital marketing.
+            At XpertVA, we take a 360° approach to our projects. A successful digital experience requires the seamless integration of multiple elements, which is why our agency offers an array of services, from interface design to custom photography to digital marketing.
           </p>
         </div>
 
@@ -121,6 +122,7 @@ export default function ServicesPage() {
           transition={{ duration: 0.6, delay: index * 0.1 }}
           viewport={{ once: true }}
           className="bg-[#111] border border-neutral-800 rounded-2xl p-8 hover:border-gray-600 transition-all hover:-translate-y-1 group shadow-md"
+        onClick={() => router.push(`/${item.slug}`)}
         >
           <item.icon className="w-12 h-12 text-blue-400 mb-5 group-hover:scale-110 transition-all" />
           <h3 className="text-xl font-semibold mb-3">{item.title}</h3>

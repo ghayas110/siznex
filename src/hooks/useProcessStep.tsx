@@ -10,7 +10,7 @@ description:
 "We begin by learning about your goals, audience, and the problem we aim to solve.",
 image: "/images/hero-app-1.svg",
 icon: Lightbulb,
-accent: "brand-orange",
+accent: "orange-300",
 direction: "left",
 },
 {
