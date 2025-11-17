@@ -11,6 +11,7 @@ const categories = [
 		"Keyword Research",
 		"Infographics",
 		"Listing Optimization",
+		"MAP Enforcement",
 		"Customer Support",
 		"A to Z guarantee Claim",
 		"Amazon Cases",
