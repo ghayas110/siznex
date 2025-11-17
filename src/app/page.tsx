@@ -6,16 +6,17 @@ import ClientsSection from "@/components/ClientsSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import CallToActionSection from "@/components/CallToActionSection";
 import Footer from "@/components/Footer";
+import SuccessStoriesSection from "@/components/SuccessStory";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
       <CreateDisruptSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <ServicesSection />
       <ClientsSection />
-   
+   <SuccessStoriesSection />
       <CallToActionSection />
       {/* <Footer /> */}
     </>

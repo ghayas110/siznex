@@ -58,7 +58,7 @@ const CreateDisruptSection = () => {
       {/* Description Section */}
       <div className="bg-black/60 text-white flex flex-col md:flex-row justify-end px-6 sm:px-12 py-12 space-y-8 md:space-y-0">
         <p className="text-base sm:text-lg md:w-1/2 leading-relaxed">
-          A local DC digital design agency with global reach. At XpertVA, we view clients as creative partners.
+          We view our clients as creative partners.
         </p>
         <p className="text-base sm:text-lg md:w-1/2 leading-relaxed">
           Together, we transform digital platforms through the fusion of diverse ideas.

@@ -4,40 +4,69 @@ import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { a } from 'framer-motion/client';
 
 const categories = [
 	'All',
-	'Artificial Intelligence',
-	'Biopharma',
-	'Construction/Landscaping',
-	'Education',
-	'Finance/Banking',
-	'Fitness',
-	'Government',
-	'Healthcare',
-	'Information Technology',
-	'Insurance',
-	'NGO/Nonprofit',
+		"Keyword Research",
+		"Infographics",
+		"Listing Optimization",
+		"Customer Support",
+		"A to Z guarantee Claim",
+		"Amazon Cases",
+		"Account health",
+		"Listing Issues",
+		"A+ Premium",
+		"Storefront Creation",
+		"Campaign Management",
+		"Coupon/promotion Management",
+		"Infringements",
+		"Hijacker Removal",
+		"Business Report",
+		"Account Management",
+		"Daily On-going Tasks",
+		"Amazon PPC Optimization",
+	
 ];
 
 const projects = [
+
 	{
-		title: 'Reflexion App',
-		image: '/relaxation.jpg',
-		category: 'Fitness',
-		description: 'Mobile app for cognitive and physical training.',
+		title: 'Collins smart Ceiling fan',
+		image: '/fan.jpg',
+		category: 'Infographics',
+		description: 'An e-commerce platform for handmade crafts.',
 	},
 	{
-		title: 'Smart Infrastructure',
-		image: '/smart-city.jpg',
-		category: 'Government',
-		description: 'Dashboard and monitoring tools for urban systems.',
+		title: 'Rechargeable table lamps',
+		image: '/lightning-lamp.jpg',
+		category: 'Infographics',
+		description: 'Lighting solutions for modern living.',
 	},
 	{
-		title: 'DowntownDC',
-		image: '/project02.webp',
-		category: 'Information Technology',
-		description: 'Mapping and urban analytics for local development.',
+		title: 'Legrand - 15a Self Test Outlet',
+		image: '/self-test-outlet.jpg',
+		category: 'Infographics',
+		description:
+			'An e-commerce platform for handmade crafts.',
+	},
+	{
+		title: 'BUBRITE:Traverse LED',
+		image: '/Transverse-led.jpg',
+		category: 'Infographics',
+		description: 'An e-commerce platform for handmade crafts.',
+	},
+	{
+		title: 'BULBRITE:LED Filament T9 Light Bulb',
+		image: '/T9-Light-Bulb.png',
+		category: 'Infographics',
+		description: 'An e-commerce platform for handmade crafts.',
+	},
+{
+		title: 'Chandelier Lift System',
+		image: '/chandelier-lift-system.jpg',
+		category: 'Infographics',
+		description: 'An e-commerce platform for handmade crafts.',
 	},
 ];
 
@@ -170,8 +199,8 @@ export default function WorkPage() {
 								src={project.image}
 								alt={project.title}
 								width={1000}
-								height={600}
-								className="w-full h-[500px] object-cover rounded-lg"
+								height={1000}
+								className="w-full h-auto object-cover rounded-lg"
 							/>
 							<div className="absolute bottom-6 left-6 text-white z-10">
 								<h3 className="text-xl font-semibold">{project.title}</h3>

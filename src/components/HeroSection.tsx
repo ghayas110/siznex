@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const words = ['Website', 'Mobile App', 'Web Apps', 'Digital Experiences'];
+const words = ['BSR Optimization', 'Brand Awareness', 'Keyword Ranking', 'Market Places'];
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -20,9 +20,9 @@ const HeroSection = () => {
       <div className="w-full">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-7xl font-light mb-8 leading-snug md:leading-tight">
-          A digital agency for the future.
+         A complete suite of digital solutions 
           <br className="hidden md:block" />
-          We create end-to-end{' '}
+          designed to grow {' '}
           <span className="text-indigo-500 font-medium transition-all duration-500">
             {words[index]}
           </span>

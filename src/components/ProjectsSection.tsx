@@ -10,16 +10,16 @@ import Image from 'next/image';
 
 const projectSlides = [
 	{
-		title: 'World Bank/2030 Water Resources Group',
+		title: 'Amazon Store Management',
 		image: '/project01.webp',
 		description:
-			'An interactive global map showcasing water access solutions powered by WebGL, Node.js, and UX research.',
+			'A comprehensive Amazon store management solution that boosted sales and optimized operations.',
 		tags: [
-			'WEB DESIGN',
-			'WEB DEVELOPMENT',
-			'INTERACTIVE MAP',
-			'SEO OPTIMIZATION',
-			'UX / UI DESIGN',
+			'Amazon PPC Optimization',
+			'Amazon Virtual Assistant',
+			'AMAZON STORE MANAGEMENT',
+			'AMAZON FBA',
+			'AMAZON SEO',
 		],
 	},
 	{

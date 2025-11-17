@@ -3,26 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
-const testimonials = [
-  {
-    quote: 'Overall, loved working with the team at Design in DC and look forward to a continued partnership with them.',
-    name: 'Pinakin Patel',
-    designation: 'CEO - IT Concept',
-    video: '/hero-video.mp4',
-  },
-  {
-    quote: 'Great team to work with, they understood our goals and helped us build a great platform.',
-    name: 'Sarah Thomas',
-    designation: 'CMO - Finverse',
-    video: '/hero-video.mp4',
-  },
-  {
-    quote: 'Fantastic support and execution throughout the entire process.',
-    name: 'Jason Lee',
-    designation: 'Founder - RetailX',
-    video: '/hero-video.mp4',
-  },
-];
+import { testimonials } from '@/data/testimonial';
 
 const achievements = new Array(4).fill([
   '/logos/logo1.png',
@@ -62,8 +43,8 @@ const ClientsSection = () => {
     <section className="py-16 bg-[#13141A] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-5xl font-semibold text-[#6563ff]">We love our clients</h2>
-        <p className="text-base sm:text-lg mt-2">And clients love to work with us</p>
+        <h2 className="text-3xl sm:text-5xl font-semibold xl:text-left text-[#6563ff] md:text-center ">We love our clients</h2>
+        <p className="text-base sm:text-lg mt-2 sm:text-center xl:text-left">And clients love to work with us</p>
 
         {/* Testimonial Slider */}
         <div className="flex flex-col md:flex-row gap-8 items-center justify-between mt-12">
@@ -77,14 +58,17 @@ const ClientsSection = () => {
           </div>
 
           {/* Video */}
-          <div className="md:w-1/2 transition-opacity duration-500 w-full" style={{ opacity: fade ? 1 : 0 }}>
-            <video
-              src={testimonials[current].video}
-              controls
-              className="rounded-md w-full h-auto aspect-video object-cover"
-            />
+          {
+            testimonials[current].video && (
+              <div className="md:w-1/2 transition-opacity duration-500 w-full" style={{ opacity: fade ? 1 : 0 }}>
+                <video
+                  src={testimonials[current].video}
+                  controls
+                  className="rounded-md w-full h-auto aspect-video object-cover"
+                />
+              </div>
+            )}
           </div>
-        </div>
 
         {/* Pagination and Arrows */}
         <div className="flex flex-wrap items-center justify-between mt-6 space-y-4 sm:space-y-0 sm:space-x-4">

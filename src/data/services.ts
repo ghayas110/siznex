@@ -6,6 +6,8 @@ export interface Service {
   desc: string;
     slug: string;
 }
+
+
 export const servicesList: Service[] = [
   { 
     icon: Lightbulb, 
