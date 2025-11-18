@@ -21,15 +21,15 @@ const Header = () => {
     <>
       <header
         className={`w-full fixed top-0 left-0 z-50 px-4 sm:px-8 md:px-12 py-4 flex items-center justify-between transition-all duration-500 ease-in-out
-          ${scrolled ? 'bg-transparent backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-6'}`}
+          ${scrolled ? 'bg-transparent   py-2' : 'bg-transparent py-6'}`}
       >
         {/* Logo */}
         <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : 'translate-x-2'}`}>
           <Image
             src="/logo-xpertva.png"
             alt="iDC Logo"
-            className="h-25 w-auto xl:h-50"
-            width={200}
+            className="h-25 w-auto"
+            width={100}
             height={100}
             priority
           />
