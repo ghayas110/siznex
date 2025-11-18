@@ -26,10 +26,10 @@ const Header = () => {
         {/* Logo */}
         <div className={`transition-all duration-500 ease-in-out ${scrolled ? 'translate-x-0' : 'translate-x-2'}`}>
           <Image
-            src="/logo.png"
+            src="/logo-xpertva.png"
             alt="iDC Logo"
-            className="h-25 w-auto"
-            width={100}
+            className="h-25 w-auto xl:h-50"
+            width={200}
             height={100}
             priority
           />
