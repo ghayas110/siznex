@@ -30,16 +30,20 @@ const HeroSection = () => {
 
         {/* Video */}
         <div className="w-full mt-12 sm:mt-16 md:mt-20 mx-auto">
-          <video
+            <video
             autoPlay
-            muted
             loop
             playsInline
-            className="w-full max-w-7xl mx-auto rounded-xl shadow-xl border border-gray-700"
-          >
+            onClick={(e) => {
+              const v = e.currentTarget as HTMLVideoElement;
+              v.muted = !v.muted; // toggle mute on click
+            }}
+            className="w-full max-w-7xl mx-auto rounded-xl shadow-xl border border-gray-700 cursor-pointer"
+            title="Click to toggle mute"
+            >
             <source src="/hero-video.mp4" type="video/mp4" />
             Your browser does not support video.
-          </video>
+            </video>
         </div>
       </div>
     </section>
