@@ -13,7 +13,7 @@ const categories = [
 		"Listing Optimization",
 		"MAP Enforcement",
 		"Customer Support",
-		"A to Z guarantee Claim",
+		"A to Z Claim",
 		"Amazon Cases",
 		"Account health",
 		"Listing Issues",
@@ -69,6 +69,151 @@ const projects = [
 		category: 'Infographics',
 		description: 'An e-commerce platform for handmade crafts.',
 	},
+	{
+		title: 'A to Z Claim Management',
+		image: '/a-z claim/1.jpg',
+		category: 'A to Z Claim',
+		description: 'amazon a to z claim management',
+	},
+	{
+		title: 'A to Z Claim Management',
+		image: '/a-z claim/2.jpg',
+		category: 'A to Z Claim',
+		description: 'amazon a to z claim management',
+	},
+	{
+		title: 'A to Z Claim Management',
+		image: '/a-z claim/3.jpg',
+		category: 'A to Z Claim',
+		description: 'amazon a to z claim management',
+	},
+	{
+		title: 'A to Z Claim Management',
+		image: '/a-z claim/4.jpg',
+		category: 'A to Z Claim',
+		description: 'amazon a to z claim management',
+	},
+	{
+		title: 'A to Z Claim Management',
+		image: '/a-z claim/5.jpg',
+		category: 'A to Z Claim',
+		description: 'amazon a to z claim management',
+	},
+	{
+		title:  "Account Health Management",
+		image: '/account-health/1.jpg',
+		category: 'Account health',
+		description: 'amazon account health management',
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/1.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+		
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/2.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+		
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/3.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+		
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/4.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+		
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/5.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+		
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/6.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+		
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/8.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/9.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+
+	},
+	{
+		title: "Amazon Cases Management",
+		image: '/amazon-cases/10.jpg',
+		category: 'Amazon Cases',
+		description: 'amazon cases management',
+
+	},
+	{
+		title: "Keyword Research Project",
+		image: '/keyword-research/1.jpg',
+		category: 'Keyword Research',
+		description: 'amazon keyword research project',
+
+	},
+	{
+		title: "Listing Optimization Project",
+		image: '/listing-optimization/1.jpg',
+		category: 'Listing Optimization',
+		description: 'amazon listing optimization project',
+
+	},
+	{
+		title: "Listing Issues Project",
+		image: '/listing-issues/1.jpg',
+		category: 'Listing Issues',
+		description: 'amazon listing issues project',
+
+	}
+	,{
+		title: "Listing Issues Project",
+		image: '/listing-issues/2.jpg',
+		category: 'Listing Issues',
+		description: 'amazon listing issues project',
+	},
+	{
+		title: "Listing Issues Project",
+		image: '/listing-issues/3.jpg',
+		category: 'Listing Issues',
+		description: 'amazon listing issues project',
+	},
+	{
+		title: "Listing Issues Project",
+		image: '/listing-issues/4.jpg',
+		category: 'Listing Issues',
+		description: 'amazon listing issues project',
+	},
+{
+		title: "Map Enforcement Project",
+		image: '/map-enforcement/1.png',
+		category: 'MAP Enforcement',
+		description: 'amazon map enforcement project',
+	},
+
 ];
 
 export default function WorkPage() {
@@ -187,14 +332,14 @@ export default function WorkPage() {
 				</div>
 
 				{/* Project Grid */}
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg">
 					{displayedProjects.map((project, index) => (
 						<motion.div
 							key={index}
 							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: index * 0.2 }}
-							className="relative rounded-lg overflow-hidden group cursor-pointer"
+							className="relative rounded-lg overflow-hidden group cursor-pointer bg-white hover:shadow-lg hover:shadow-black/30 transition-shadow duration-300"
 						>
 							<Image
 								src={project.image}
@@ -203,7 +348,7 @@ export default function WorkPage() {
 								height={1000}
 								className="w-full h-auto object-cover rounded-lg"
 							/>
-							<div className="absolute bottom-6 left-6 text-white z-10">
+							<div className="absolute bottom-6 left-6 text-pink-500 z-10">
 								<h3 className="text-xl font-semibold">{project.title}</h3>
 								<p className="text-sm text-gray-300 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 									{project.description}
