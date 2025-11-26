@@ -88,7 +88,7 @@ const services = [
     ],
   },
   {
-    title: "Design & Branding",
+    title: "Design & Development",
     color: "text-pink-300",
     bg: "bg-pink-500/10",
     icon: PiPenNibLight,

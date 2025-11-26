@@ -2,11 +2,11 @@ import { blogPosts } from "@/data/blogPost";
 import Image from "next/image";
 
 interface BlogPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function BlogDetailPage({ params }: BlogPageProps) {
-  const { slug } = params;
+export default async function BlogDetailPage({ params }: BlogPageProps) {
+  const { slug } = await params;
 
   const post = blogPosts.find((p) => p.slug === slug);
 

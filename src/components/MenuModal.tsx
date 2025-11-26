@@ -105,13 +105,13 @@ const MenuModal = ({
       {/* Footer */}
       <div className="w-full flex flex-col md:flex-row items-center justify-between mt-10 sm:mt-0 text-white/70 text-sm">
         <div className="flex gap-6 mt-6 md:mt-0 text-lg">
-          <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/xpertva/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="cursor-pointer hover:text-white transition" />
           </a>
           <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
             <FaTwitter className="cursor-pointer hover:text-white transition" />
           </a>
-          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/xpertva" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
             <FaFacebookF className="cursor-pointer hover:text-white transition" />
           </a>
           <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -121,7 +121,7 @@ const MenuModal = ({
         </div>
 
         {/* Careers */}
-        <div className="mt-4 md:mt-0">
+        {/* <div className="mt-4 md:mt-0">
           <Link
             href="/careers"
             className="hover:underline cursor-pointer"
@@ -130,7 +130,7 @@ const MenuModal = ({
           >
             Careers ↗
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
