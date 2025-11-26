@@ -129,27 +129,35 @@ export default function TeamPage() {
       <section className="py-24 px-6 bg-gray-900">
         <h2 className="text-4xl text-center font-semibold mb-12">Testimonials</h2>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3300 }}
-          spaceBetween={40}
-          slidesPerView={1}
-          className="max-w-3xl mx-auto"
-        >
+           <div className="w-full mt-12 sm:mt-16 md:mt-20 mx-auto mb-8">
+            <video
+            autoPlay
+            loop
+            playsInline
+            onClick={(e) => {
+              const v = e.currentTarget as HTMLVideoElement;
+              v.muted = !v.muted; // toggle mute on click
+            }}
+            className="w-full max-w-2xl h-auto mx-auto rounded-xl shadow-xl border border-gray-700 cursor-pointer"
+            title="Click to toggle mute"
+            >
+            <source src="/customer.mp4" type="video/mp4" />
+            Your browser does not support video.
+            </video>
+        </div>
           {[
             "XpertVA helped scale my Amazon business beyond expectations. Their professionalism and deep understanding of eCommerce sets them apart.",
             "Outstanding service! My Shopify store saw instant improvement. Highly recommend their VA team.",
             "The best eCommerce support agency I’ve worked with—period. Amazing communication and results."
           ].map((text, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="bg-gray-800 p-10 rounded-xl shadow-xl text-center">
+
+              <div key={idx} className="bg-gray-800 p-10 rounded-xl shadow-xl text-center mb-6">
                 <p className="text-gray-300 italic text-lg">{text}</p>
                 <p className="text-gray-500 mt-3 text-sm">— Client Review</p>
               </div>
-            </SwiperSlide>
+      
           ))}
-        </Swiper>
+     
       </section>
 
       {/* 💼 JOB OPENINGS */}
