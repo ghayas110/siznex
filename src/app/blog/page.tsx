@@ -64,7 +64,7 @@ export default function Blog() {
                 <div className="p-5">
                   <h4 className="text-lg sm:text-xl font-semibold mb-2">
                     <Link
-                      href={`/blog/${post.title.toLowerCase().replace(/ /g, "-")}`}
+                      href={`/blog/${post.slug}`}
                       className="hover:text-blue-400 transition"
                     >
                       {post.title}
@@ -76,7 +76,7 @@ export default function Blog() {
                   </p>
 
                   <Link
-                    href={`/blog/${post.title.toLowerCase().replace(/ /g, "-")}`}
+                    href={`/blog/${post.slug}`}
                     className="text-blue-400 underline text-sm mt-3 inline-block"
                   >
                     Read More →
