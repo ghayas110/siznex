@@ -32,7 +32,7 @@ const Header = () => {
           <Image
             src="/logo-xpertva.png"
             alt="iDC Logo"
-            className="w-24 md:w-32 h-auto"
+            className="w-24 md:w-32 h-auto cursor-pointer"
             width={128}
             height={128}
             priority
