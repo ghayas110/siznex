@@ -4,17 +4,26 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { X } from 'lucide-react';
 
-const Modal = ({ onClose }: { onClose: () => void }) => {
+const ModalAudit = ({ onClose }: { onClose: () => void }) => {
   const validationSchema = Yup.object({
     fullName: Yup.string().required('This field is mandatory'),
     email: Yup.string()
       .email('Email is invalid')
       .required('This field is mandatory'),
     phone: Yup.string().required('This field is mandatory'),
-
+    storeLink: Yup.string().required('This field is mandatory'),
+    preferredAsin: Yup.string().required('This field is mandatory'),
+    message: Yup.string().required('This field is mandatory'),
   });
 
-  const handleSubmit = (values: { fullName: string; email: string; phone: string  }) => {
+  const handleSubmit = (values: {
+    fullName: string;
+    email: string;
+    phone: string;
+    storeLink: string;
+    preferredAsin: string;
+    message: string;
+  }) => {
     console.log('Form submitted:', values);
     onClose();
   };
@@ -36,7 +45,14 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
           </p>
 
           <Formik
-            initialValues={{ fullName: '', email: '', phone: '' }}
+            initialValues={{
+              fullName: '',
+              email: '',
+              phone: '',
+              storeLink: '',
+              preferredAsin: '',
+              message: '',
+            }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
@@ -84,6 +100,32 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
                 </div>
                 <div>
                   <Field
+                    id="storeLink"
+                    name="storeLink"
+                    placeholder="Store Link*"
+                    className="w-full bg-transparent border-b border-white text-white py-2 px-1 placeholder-white focus:outline-none"
+                  />
+                  <ErrorMessage
+                    name="storeLink"
+                    component="div"
+                    className="text-red-500 text-sm mt-1"
+                  />
+                    </div>
+                    <div>
+                        <Field  
+                            id="preferredAsin"
+                            name="preferredAsin"
+                            placeholder="Preferred ASIN*"
+                            className="w-full bg-transparent border-b border-white text-white py-2 px-1 placeholder-white focus:outline-none"
+                        />
+                        <ErrorMessage
+                            name="preferredAsin"
+                            component="div"
+                            className="text-red-500 text-sm mt-1"
+                        />
+                    </div>
+                <div>
+                  <Field
                     id="message"
                     name="message"
                     placeholder="Your message*"
@@ -94,7 +136,8 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
                     component="div"
                     className="text-red-500 text-sm mt-1"
                   />
-                </div>  
+                </div>
+
 
                 <div className="flex justify-end">
                 <button
@@ -126,4 +169,4 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
   );
 };
 
-export default Modal;
+export default ModalAudit;

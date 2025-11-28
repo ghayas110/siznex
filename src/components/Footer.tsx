@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-12">
         {/* Left Column - Logo */}
         <div className="flex-1 flex justify-center md:justify-start">
-          <Image src="/logo.png" alt="iDC Logo" className="h-20" width={100} height={100} />
+          <Image src="/logo-xpertva.png" alt="iDC Logo" className="h-20" width={100} height={100} />
           
         </div>
 
@@ -23,7 +23,7 @@ const Footer = () => {
           <ul className="space-y-2">
             {[
 
-"Home", "Work", "Services", "Team", "Blog", "Contact"
+"Home", "Work", "Services", "Contact"
 ].map((item) => (
               <li
                 key={item}
@@ -35,7 +35,7 @@ const Footer = () => {
             ))}
           </ul>
           <ul className="space-y-2">
-            {['Privacy Policy'].map((item) => (
+            {['Privacy Policy', "Team", "Blog"].map((item) => (
               <li
                 key={item}
                 className="flex items-center justify-between border-b border-gray-700 py-2 cursor-pointer hover:text-gray-400 transition-colors"

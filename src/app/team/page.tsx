@@ -57,10 +57,10 @@ export default function TeamPage() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white mt-10">
 
       {/* HERO */}
-      <section className="pt-28 pb-20 px-6 text-center max-w-4xl mx-auto">
+      <section className="pt-24 pb-12 md:pt-28 md:pb-20 px-6 text-center max-w-4xl mx-auto">
         <h1 className="text-5xl font-semibold mb-6">About XpertVA</h1>
         <p className="text-gray-300 text-lg leading-relaxed">
           Supporting businesses globally with expert eCommerce services.
@@ -103,21 +103,21 @@ export default function TeamPage() {
       </section>
 
       {/* TEAM */}
-      <section className="py-24 px-6 text-center max-w-5xl mx-auto">
+      <section className="py-12 md:py-24 px-6 text-center max-w-5xl mx-auto">
         <h2 className="text-4xl font-semibold mb-10">Meet Our Creative Team</h2>
         <p className="text-gray-300 max-w-3xl mx-auto mb-14 leading-relaxed">
           The core leadership behind XpertVA’s success.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-14 justify-center">
-          <div>
+          <div className="flex flex-col items-center">
             {/* make image square */}
             <Image src={"/alizaidi.jpeg"} alt="Ali Zaidi" width={180} height={180} className="rounded-xl shadow-lg " />
             <p className="mt-5 text-xl font-semibold">Ali Zaidi</p>
             <p className="text-gray-400 text-sm">CEO / Founder</p>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <Image src={"/Ebraheem.jpeg"} alt="Ebraheem Azhar" width={180} height={180} className="rounded-xl shadow-lg" />
             <p className="mt-5 text-xl font-semibold">Ebraheem Azhar</p>
             <p className="text-gray-400 text-sm">COO</p>
@@ -126,7 +126,7 @@ export default function TeamPage() {
       </section>
 
       {/* ⭐ TESTIMONIAL SLIDER */}
-      <section className="py-24 px-6 bg-gray-900">
+      <section className="py-12 md:py-24 px-6 bg-gray-900">
         <h2 className="text-4xl text-center font-semibold mb-12">Testimonials</h2>
 
            <div className="w-full mt-12 sm:mt-16 md:mt-20 mx-auto mb-8">
@@ -161,7 +161,7 @@ export default function TeamPage() {
       </section>
 
       {/* 💼 JOB OPENINGS */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
+      <section className="py-12 md:py-24 px-6 max-w-5xl mx-auto">
         <h2 className="text-4xl font-semibold mb-12 text-center">Career Openings</h2>
 
         <div className="grid md:grid-cols-2 gap-10">

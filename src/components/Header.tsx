@@ -5,11 +5,15 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Modal from './Modal';
 import MenuModal from './MenuModal';
+import { useRouter } from 'next/navigation';
+import ModalAudit from './ModalAudit';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpenAudit, setIsModalOpenAudit] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -28,10 +32,11 @@ const Header = () => {
           <Image
             src="/logo-xpertva.png"
             alt="iDC Logo"
-            className="h-25 w-auto"
-            width={100}
-            height={100}
+            className="w-24 md:w-32 h-auto"
+            width={128}
+            height={128}
             priority
+            onClick={() => router.push('/')} 
           />
         </div>
 
@@ -79,8 +84,18 @@ const Header = () => {
           </button>
         </div>
       )}
-
+ {scrolled && (
+        <div className="fixed bottom-4 right-4 z-50 hidden md:block">
+          <button
+            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-full flex items-center gap-2"
+            onClick={() => setIsModalOpenAudit(true)}
+          >
+            Request Free Audit <ArrowUpRight size={16} />
+          </button>
+        </div>
+      )}
       {/* Modals */}
+      {isModalOpenAudit && <ModalAudit onClose={() => setIsModalOpenAudit(false)} />}
       {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
       {isMenuOpen && <MenuModal onClose={() => setIsMenuOpen(false)} openModal={() => setIsModalOpen(true)} />}
     </>

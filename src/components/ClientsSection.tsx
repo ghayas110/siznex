@@ -5,12 +5,34 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import { testimonials } from '@/data/testimonial';
 
-const achievements = new Array(4).fill([
-  '/logos/logo1.png',
-  '/logos/logo2.webp',
-  '/logos/logo3.webp',
-  '/logos/logo4.webp',
-]).flat();
+const achievements = [
+  '/logos/AGENTS MOTOR PARTS.png',
+  '/logos/ASTORIA.png',
+  '/logos/ATTAR MIST.png',
+  '/logos/Bulbrite.png',
+  '/logos/CONRAD SHOPPING.png',
+  '/logos/CREEK.png',
+  '/logos/DIAMOND EXCELLENCY.png',
+  '/logos/EAGLES.png',
+  '/logos/EARTH CIRCLE ORGANICS.png',
+  '/logos/FLY.png',
+  '/logos/GAX.png',
+  '/logos/GLOBAL WALKOUT.png',
+  '/logos/GRAPEXX.png',
+  '/logos/GYMKHANA.png',
+  '/logos/H.png',
+  '/logos/HOLIDAY APARTMENT.png',
+  '/logos/HOMELUX.png',
+  '/logos/LONDON LABS.png',
+  '/logos/LOOKSMITT.png',
+  '/logos/NOVAVITA NUTRITION.png',
+  '/logos/OFFICE-SUPPLY.png',
+  '/logos/Trecto Solution.png',
+  '/logos/WE LOVE RESTURANT.png',
+  '/logos/eq sport.png',
+  '/logos/humminghemp.png',
+  '/logos/stand-store.png',
+];
 
 const ClientsSection = () => {
   const [current, setCurrent] = useState(0);
@@ -89,7 +111,7 @@ const ClientsSection = () => {
         {/* Achievements */}
         <div className="mt-20">
           <h3 className="text-lg sm:text-xl font-medium mb-6">Our Achievements</h3>
-          <div className="w-full overflow-x-auto">
+          <div className="w-full overflow-hidden">
             <div className="flex space-x-6 animate-scroll w-max">
               {achievements.map((src, index) => (
                 <img
@@ -109,7 +131,7 @@ const ClientsSection = () => {
                 transform: translateX(0%);
               }
               to {
-                transform: translateX(-50%);
+                transform: translateX(-100%);
               }
             }
             .animate-scroll {
