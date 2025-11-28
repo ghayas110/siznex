@@ -12,100 +12,8 @@ import { FaAmazon } from "react-icons/fa";
 import { SiEbay, SiShopify, SiWalmart } from "react-icons/si";
 import { PiPenNibLight } from "react-icons/pi";
 
-const services = [
-  {
-    title: "Amazon Services",
-    color: "text-yellow-400",
-    bg: "bg-yellow-500/10",
-    icon: FaAmazon,
-    details: [
-      "Keyword Research",
-      "Listing Optimization",
-      "Customer Support",
-      "A to Z Guarantee Claims",
-      "Amazon Cases",
-      "Account Health",
-      "Listing Issues",
-      "A+ (EBC) Creation",
-      "Storefront Creation",
-      "Campaign Management",
-      "Coupon/Promotion Management",
-      "Infringements",
-      "Hijacker Removal",
-      "Business Report",
-      "Account Management",
-      "MAP Enforcement",
-    ],
-  },
-  {
-    title: "Ebay Services",
-    color: "text-blue-300",
-    bg: "bg-blue-500/10",
-    icon: SiEbay,
-    details: [
-      "Store Setup & Optimization",
-      "Product Listing & Management",
-      "Customer Service",
-      "Order Fulfillment",
-      "Marketing & Promotions",
-      "Account Health Management",
-      "eBay SEO Optimization",
-      "Promotions & Advertising",
-      "eBay Cases",
-    ],
-  },
-  {
-    title: "Shopify Services",
-    color: "text-green-300",
-    bg: "bg-green-500/10",
-    icon: SiShopify,
-    details: [
-      "Store Setup & Customization",
-      "Product Upload & Management",
-      "Payment Gateway Integration",
-      "App Integration",
-      "Theme Customization",
-      "SEO Optimization",
-      "Marketing & Promotions",
-      "Customer Support",
-      "Order Management",
-    ],
-  },
-  {
-    title: "Walmart Services",
-    color: "text-indigo-300",
-    bg: "bg-indigo-500/10",
-    icon: SiWalmart,
-    details: [
-      "Account Setup & Management",
-      "Product Listing & Optimization",
-      "Inventory Management",
-      "Order Fulfillment",
-      "Customer Service",
-      "Walmart SEO Optimization",
-      "Account Health Monitoring",
-      "Walmart Cases",
-    ],
-  },
-  {
-    title: "Design & Development",
-    color: "text-pink-300",
-    bg: "bg-pink-500/10",
-    icon: PiPenNibLight,
-    details: [
-      "Logo Design",
-      "Brand Identity",
-      "Packaging Design",
-      "Print Design",
-      "Social Media Graphics",
-      "Marketing Materials",
-      "Infographics",
-      "Website Design",
-      "App Development",
-      "UI/UX Design",
-    ],
-  },
-];
+import { services } from "@/data/services-detailed";
+import Link from "next/link";
 
 const ServicesSection = () => {
   return (
@@ -121,24 +29,25 @@ const ServicesSection = () => {
       {/* 🔁 Mobile */}
       <div className="block sm:hidden divide-y divide-white">
         {services.map((service, index) => (
-          <div key={index} className="flex justify-between items-center px-6 py-6">
+          <Link href={`/services/${service.slug}`} key={index} className="flex justify-between items-center px-6 py-6 hover:bg-white/5 transition">
             <div className="flex items-center gap-3">
               <service.icon size={22} className={service.color} />
               <p className="text-lg font-normal">{service.title}</p>
             </div>
             <ArrowUpRight size={20} className="text-white" />
-          </div>
+          </Link>
         ))}
       </div>
 
       {/* 💻 Desktop */}
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-5 gap-4 px-6 lg:px-12">
         {services.map((service, i) => (
-          <div
+          <Link
+            href={`/services/${service.slug}`}
             key={i}
             className="relative group border border-gray-800 rounded-xl overflow-hidden
             h-[250px] lg:h-[500px] bg-gradient-to-b from-gray-900 to-black
-            hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
+            hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 block"
           >
             {/* Center content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3
@@ -159,21 +68,26 @@ const ServicesSection = () => {
               </h3>
 
               <ul className="space-y-1">
-                {service.details.map((detail, index) => (
+                {service.details.slice(0, 5).map((detail, index) => (
                   <li
                     key={index}
                     className="text-sm text-gray-200 hover:text-white transition"
                   >
-                    • {detail}
+                    • {detail.title}
                   </li>
                 ))}
+                {service.details.length > 5 && (
+                  <li className="text-sm text-blue-400 mt-2">
+                    + {service.details.length - 5} more...
+                  </li>
+                )}
               </ul>
 
               <div className="absolute bottom-4 left-6 animate-bounce">
                 <ArrowUpRight size={22} className="text-white" />
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
