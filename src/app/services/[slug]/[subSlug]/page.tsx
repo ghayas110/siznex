@@ -73,36 +73,73 @@ export default function SubServicePage({ params }: PageProps) {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="bg-[#121212] border border-[#1f1f1f] rounded-2xl p-8 md:p-12 mb-20"
+            className="space-y-12 mb-20"
           >
-            <h2 className="text-2xl font-bold mb-6">How We Can Help</h2>
-            <div className="prose prose-invert max-w-none">
-              <p className="text-gray-300 leading-relaxed mb-8 text-lg">
-                Our team of experts specializes in <strong>{subService.title}</strong> to help you achieve your business goals. 
-                We provide tailored solutions that are designed to meet your specific needs and drive results.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {(subService.benefits || [
-                  "Expert Strategy & Execution",
-                  "Data-Driven Approach",
-                  "Continuous Optimization",
-                  "Transparent Reporting",
-                  "Dedicated Support Team",
-                  "Scalable Solutions"
-                ]).map((benefit, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-[#1a1a1a] p-4 rounded-xl border border-[#222]">
-                    <CheckCircle2 className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-200 font-medium">{benefit}</span>
-                  </div>
-                ))}
+            {/* Long Description */}
+            {subService.longDescription && (
+              <div className="bg-[#121212] border border-[#1f1f1f] rounded-2xl p-8 md:p-12">
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+                    {subService.longDescription}
+                  </p>
+                </div>
               </div>
+            )}
 
-              <p className="text-gray-300 leading-relaxed">
-                Whether you are just starting out or looking to scale, our {subService.title.toLowerCase()} services 
-                provide the leverage you need to stay ahead of the competition.
-              </p>
-            </div>
+            {/* Dynamic Sections */}
+            {subService.sections?.map((section, index) => (
+              <div 
+                key={index}
+                className="bg-[#121212] border border-[#1f1f1f] rounded-2xl p-8 md:p-12"
+              >
+                <h2 className="text-2xl font-bold mb-6">{section.title}</h2>
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-gray-300 leading-relaxed mb-8 text-lg whitespace-pre-line">
+                    {section.content}
+                  </p>
+                  
+                  {section.list && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {section.list.map((item, i) => (
+                        <div key={i} className="flex items-start gap-3 bg-[#1a1a1a] p-4 rounded-xl border border-[#222]">
+                          <CheckCircle2 className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-200 font-medium">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            {/* Fallback for legacy data or if no sections exist */}
+            {!subService.sections && (
+              <div className="bg-[#121212] border border-[#1f1f1f] rounded-2xl p-8 md:p-12">
+                <h2 className="text-2xl font-bold mb-6">How We Can Help</h2>
+                <div className="prose prose-invert max-w-none">
+                  <p className="text-gray-300 leading-relaxed mb-8 text-lg">
+                    Our team of experts specializes in <strong>{subService.title}</strong> to help you achieve your business goals. 
+                    We provide tailored solutions that are designed to meet your specific needs and drive results.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {(subService.benefits || [
+                      "Expert Strategy & Execution",
+                      "Data-Driven Approach",
+                      "Continuous Optimization",
+                      "Transparent Reporting",
+                      "Dedicated Support Team",
+                      "Scalable Solutions"
+                    ]).map((benefit, i) => (
+                      <div key={i} className="flex items-start gap-3 bg-[#1a1a1a] p-4 rounded-xl border border-[#222]">
+                        <CheckCircle2 className="w-6 h-6 text-orange-300 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-200 font-medium">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </motion.div>
 
           {/* Our Process Section */}

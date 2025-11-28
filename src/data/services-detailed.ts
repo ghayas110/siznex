@@ -3,11 +3,18 @@ import { SiEbay, SiShopify, SiWalmart } from "react-icons/si";
 import { PiPenNibLight } from "react-icons/pi";
 import { IconType } from "react-icons";
 
+export interface ServiceSection {
+    title: string;
+    content: string;
+    list?: string[];
+}
+
 export interface SubService {
     title: string;
     slug: string;
     description: string;
-    content?: string;
+    longDescription?: string;
+    sections?: ServiceSection[];
     process?: { title: string; description: string }[];
     benefits?: string[];
 }
@@ -22,6 +29,48 @@ export interface ServiceDetail {
 }
 
 const generateSlug = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
+const generateServiceContent = (serviceName: string): Partial<SubService> => {
+    return {
+        longDescription: `Using ${serviceName} is one of the most effective strategies adopted by businesses to increase buyer trust and boost conversion rates. It can even prove beneficial for higher ranking in search results. In short, ${serviceName} is your dressed-up content for your store and listings.\n\n${serviceName} incorporates strategies that make your product listings more engaging and attractive for customers. It is a premium feature that offers sellers to edit and update product details and descriptions using rich content.`,
+        sections: [
+            {
+                title: `${serviceName} for Your Business`,
+                content: `${serviceName} is accessible to sellers who want to elevate their brand presence. Once implemented, it offers significant advantages in how your products are perceived.\n\nIt allows you to improve the sophistication of the online shopping experience for your potential customers, leading to better engagement and higher sales velocity.`
+            },
+            {
+                title: `${serviceName} Services`,
+                content: `XpertVA’s ${serviceName} services assure enhanced material is uploaded for your clients. XpertVA’s professionals will ensure that the content, images, description, etc., of the product, is engaging and intriguing for the customer. Our experts will ensure such content for your pages that will entice customers to make the purchase. Our experts will allow you to post excellent content on your store including product page descriptions, product photos, comparison tables, and buying advice.`,
+                list: [
+                    "Product page descriptions",
+                    "Product photos",
+                    "Comparison tables",
+                    "Buying advice"
+                ]
+            },
+            {
+                title: "XpertVA’s Solutions",
+                content: `XpertVA’s ${serviceName} services provide tailored solutions for your store. Following is a list of benefits for our valued customers:`,
+                list: [
+                    "Excellent Content Production: Informative and easy to read content optimized for search engine exposure.",
+                    "Detail Page Design: Appealing content presented using tailored services to make it easier for shoppers to find information.",
+                    "Comparison Diagrams: Instructive yet brief charts to persuade shoppers and improve conversion rates.",
+                    "Visual Enhancement: Retouching product images and creating attractive representations to boost buyer confidence."
+                ]
+            },
+            {
+                title: "Perks of Outsourcing to XpertVA",
+                content: `Here at XpertVA, we have a highly skilled and experienced team for tailored solutions to match the needs of your store. Following are a few perks you get by outsourcing your ${serviceName} tasks to XpertVA:`,
+                list: [
+                    "Improvement in your organic ranking on search engines.",
+                    "Imaginative layouts and unique formats make listings more engaging.",
+                    "Well-structured content makes it easier for clients to skim through details.",
+                    "Strong brand image and customer loyalty lead to improved reputation and increased sales."
+                ]
+            }
+        ]
+    };
+};
 
 export const services: ServiceDetail[] = [
     {
@@ -47,10 +96,10 @@ export const services: ServiceDetail[] = [
             { title: "Business Report", description: "Detailed analysis of your business performance and sales trends." },
             { title: "Account Management", description: "Full-service management of your Amazon seller central account." },
             { title: "MAP Enforcement", description: "Enforcing Minimum Advertised Price policies across sellers." },
-            { title: "MAP Enforcement", description: "Enforcing Minimum Advertised Price policies across sellers." },
         ].map(item => ({
             ...item,
             slug: generateSlug(item.title),
+            ...generateServiceContent(item.title),
             process: [
                 { title: "Analysis", description: "We start by analyzing your current status and identifying opportunities." },
                 { title: "Strategy", description: "Developing a tailored plan to achieve your specific goals." },
@@ -83,10 +132,10 @@ export const services: ServiceDetail[] = [
             { title: "eBay SEO Optimization", description: "Optimizing listings with right keywords to rank higher in search." },
             { title: "Promotions & Advertising", description: "Managing promoted listings to increase product visibility." },
             { title: "eBay Cases", description: "Resolving disputes, returns, and cancellations effectively." },
-            { title: "eBay Cases", description: "Resolving disputes, returns, and cancellations effectively." },
         ].map(item => ({
             ...item,
             slug: generateSlug(item.title),
+            ...generateServiceContent(item.title),
             process: [
                 { title: "Audit", description: "Reviewing your eBay store and listings for improvement areas." },
                 { title: "Optimization", description: "Enhancing listings and store settings for better visibility." },
@@ -119,10 +168,10 @@ export const services: ServiceDetail[] = [
             { title: "Marketing & Promotions", description: "Setting up discount codes and marketing campaigns." },
             { title: "Customer Support", description: "Handling customer queries via live chat or email." },
             { title: "Order Management", description: "Streamlining the order processing and fulfillment workflow." },
-            { title: "Order Management", description: "Streamlining the order processing and fulfillment workflow." },
         ].map(item => ({
             ...item,
             slug: generateSlug(item.title),
+            ...generateServiceContent(item.title),
             process: [
                 { title: "Setup", description: "Configuring your Shopify store with best practices." },
                 { title: "Customization", description: "Tailoring the design and functionality to your brand." },
@@ -154,10 +203,10 @@ export const services: ServiceDetail[] = [
             { title: "Walmart SEO Optimization", description: "Optimizing titles and attributes for Walmart's search algorithm." },
             { title: "Account Health Monitoring", description: "Tracking performance metrics to maintain good standing." },
             { title: "Walmart Cases", description: "Handling support tickets and disputes with Walmart." },
-            { title: "Walmart Cases", description: "Handling support tickets and disputes with Walmart." },
         ].map(item => ({
             ...item,
             slug: generateSlug(item.title),
+            ...generateServiceContent(item.title),
             process: [
                 { title: "Application", description: "Assisting with the Walmart Marketplace application process." },
                 { title: "Onboarding", description: "Setting up your account and listing your catalog." },
@@ -191,10 +240,10 @@ export const services: ServiceDetail[] = [
             { title: "Website Design", description: "Designing user-friendly and visually appealing websites." },
             { title: "App Development", description: "Building custom mobile applications for iOS and Android." },
             { title: "UI/UX Design", description: "Designing intuitive user interfaces and experiences." },
-            { title: "UI/UX Design", description: "Designing intuitive user interfaces and experiences." },
         ].map(item => ({
             ...item,
             slug: generateSlug(item.title),
+            ...generateServiceContent(item.title),
             process: [
                 { title: "Discovery", description: "Understanding your brand, audience, and objectives." },
                 { title: "Concept", description: "Creating initial design concepts and mood boards." },
