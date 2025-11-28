@@ -19,7 +19,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
   }
 
   return (
-    <div className="bg-black text-white min-h-screen px-5 pt-24 pb-20">
+    <div className="bg-black text-white min-h-screen px-5 pt-24 pb-12 md:pb-20">
       <div className="max-w-3xl mx-auto">
 
         {/* Category + Date */}
@@ -31,7 +31,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl font-bold text-white leading-snug mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-white leading-snug mb-6">
           {post.title}
         </h1>
 
@@ -50,7 +50,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
         <div className="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed">
           <p className="mb-6">{post.description}</p>
 
-          <h2 className="text-2xl font-semibold text-white mt-10">
+          <h2 className="text-xl md:text-2xl font-semibold text-white mt-10">
             Why This Topic Matters
           </h2>
           <p className="text-gray-300 mt-3">
@@ -58,7 +58,7 @@ export default async function BlogDetailPage({ params }: BlogPageProps) {
             conversions, customer satisfaction, and long-term business performance.
           </p>
 
-          <h3 className="text-xl font-semibold text-white mt-10">
+          <h3 className="text-lg md:text-xl font-semibold text-white mt-10">
             Final Thoughts
           </h3>
           <p className="text-gray-300 mt-3">

@@ -265,7 +265,7 @@ export default function MarketingSolutionsPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               What Search Engine Optimization Services Do We Provide?
             </h2>
             <p className="text-gray-400 max-w-3xl mb-10">
@@ -364,7 +364,7 @@ export default function MarketingSolutionsPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               Digital Marketing & Growth Services
             </h2>
             <p className="text-gray-400 max-w-3xl mb-6">
@@ -442,7 +442,7 @@ export default function MarketingSolutionsPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               Why Partner with XpertVA for Digital Marketing?
             </h2>
             <p className="text-gray-400 max-w-3xl mb-5">

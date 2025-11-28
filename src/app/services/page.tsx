@@ -83,7 +83,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-8xl mx-auto px-4 md:px-10 pt-36 pb-20">
+      <div className="relative z-10 max-w-8xl mx-auto px-4 md:px-10 pt-24 md:pt-36 pb-20">
         <div className="mb-12 pt-32 pl-2 sm:pl-8 md:pt-40 md:pl-20 text-left max-w-4xl">
           <h1 className="text-[6vw] sm:text-[4.5vw] md:text-[2.2vw] font-light mb-4 leading-tight">
             We provide a full range of web services
@@ -96,7 +96,7 @@ export default function ServicesPage() {
         {/* Carousel */}
       
 {/* SERVICES — ANIMATED CARDS */}
-<section className="relative bg-black text-white py-28 px-4 md:px-20">
+<section className="relative bg-black text-white py-16 md:py-28 px-4 md:px-20">
 
   {/* Soft top gradient */}
   <div className="absolute inset-0 bg-gradient-to-b from-[#111] via-black to-black z-0 opacity-40"></div>
@@ -134,10 +134,10 @@ export default function ServicesPage() {
   </div>
 </section>
 {/* WHY CHOOSE US */}
-<section className="relative bg-black text-white py-24 px-4 md:px-20">
+<section className="relative bg-black text-white py-16 md:py-24 px-4 md:px-20">
 
   <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-[4vw] sm:text-[3vw] md:text-[2.2vw] font-light mb-6">
+    <h2 className="text-[4vw] sm:text-[4vw] md:text-[4vw] font-light mb-6">
       Why Choose Us
     </h2>
     <p className="text-gray-300 max-w-2xl mx-auto mb-16">
@@ -167,13 +167,7 @@ export default function ServicesPage() {
   </div>
 
 </section>
-
-
-
       </div>
- 
-   
-
       <CallToActionSection />
     </section>
   );

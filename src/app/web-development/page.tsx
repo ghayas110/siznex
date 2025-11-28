@@ -162,7 +162,7 @@ export default function WebsiteDevelopmentPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4">
               Specialized eCommerce & Web Development Expertise
             </h2>
             <p className="text-gray-400 max-w-3xl mb-4">
@@ -191,7 +191,7 @@ export default function WebsiteDevelopmentPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               XpertVA’s Areas of Expertise in Web Development
             </h2>
             <p className="text-gray-400 max-w-3xl mb-10">
@@ -273,7 +273,7 @@ export default function WebsiteDevelopmentPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               The Main Web Development Services XpertVA Provides
             </h2>
             <p className="text-gray-400 max-w-3xl mb-8">
@@ -345,7 +345,7 @@ export default function WebsiteDevelopmentPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               WordPress Website Design & Development Services
             </h2>
             <p className="text-gray-400 max-w-3xl mb-4">
@@ -473,7 +473,7 @@ export default function WebsiteDevelopmentPage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-3xl font-bold mb-3">
+            <h2 className="text-2xl font-bold mb-3">
               Custom App Development Services
             </h2>
             <p className="text-gray-400 max-w-3xl mb-8">
@@ -540,7 +540,7 @@ export default function WebsiteDevelopmentPage() {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-2xl font-bold mb-4">
                 Schedule a Consultation Call
               </h2>
               <p className="text-gray-400 mb-4">
@@ -590,7 +590,7 @@ export default function WebsiteDevelopmentPage() {
         {/* Final CTA */}
         <section className="py-20 text-center bg-gradient-to-b from-[#151515] to-[#0b0b0b] border-t border-[#222]">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl md:text-4xl font-bold mb-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
