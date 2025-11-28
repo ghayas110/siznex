@@ -17,7 +17,7 @@ import Link from "next/link";
 
 const ServicesSection = () => {
   return (
-    <section className="min-h-[700px] bg-black text-white">
+    <section className="min-h-[400px] md:min-h-[1200px] bg-black text-white">
       {/* Header */}
       <div className="flex justify-between items-center px-6 sm:px-12 py-6 sm:py-8 border-b border-white sm:border-b-0">
         <h2 className="text-2xl sm:text-3xl font-semibold">What We Do</h2>

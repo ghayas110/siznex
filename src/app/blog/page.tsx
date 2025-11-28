@@ -30,7 +30,7 @@ export default function Blog() {
                 alt={blogPosts[0].title}
                 width={1200}
                 height={600}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
               <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-black/60 p-4 rounded-lg max-w-xs sm:max-w-sm">
                 <h3 className="text-lg sm:text-2xl font-bold">{blogPosts[0].title}</h3>
@@ -57,7 +57,7 @@ export default function Blog() {
                     alt={post.title}
                     width={600}
                     height={300}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-contain object-center"
                   />
                 </Link>
 

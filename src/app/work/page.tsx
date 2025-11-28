@@ -12,21 +12,17 @@ const categories = [
 		"Infographics",
 		"Listing Optimization",
 		"MAP Enforcement",
-		"Customer Support",
 		"A to Z Claim",
 		"Amazon Cases",
 		"Account health",
 		"Listing Issues",
 		"A+ Premium",
 		"Storefront Creation",
-		"Campaign Management",
-		"Coupon/promotion Management",
-		"Infringements",
-		"Hijacker Removal",
-		"Business Report",
-		"Account Management",
-		"Daily On-going Tasks",
 		"Amazon PPC Optimization",
+		"Coupon/promotion Management",
+		"Infringements/Hijacker Removal",
+		"Daily On-going Tasks",
+		
 	
 ];
 

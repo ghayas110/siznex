@@ -13,8 +13,8 @@ const Footer = () => {
     <footer className="bg-black text-white py-16 text-sm">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-12">
         {/* Left Column - Logo */}
-        <div className="flex-1 flex justify-center md:justify-start">
-          <Image src="/logo-xpertva.png" alt="iDC Logo" className="h-20" width={100} height={100} />
+        <div className="flex-1 flex justify-center md:justify-start hidden md:flex">
+          <Image src="/logo-xpertva.png" alt="iDC Logo" className="h-20 cursor-pointer" width={100} height={100} onClick={() => router.push("/")}/>
           
         </div>
 
