@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ['XpertVA.com'],
+    unoptimized: true,
   },
+  
 };
 
 export default nextConfig;
