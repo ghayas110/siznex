@@ -16,8 +16,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.siznex.com"),
   title: "XpertVA - Professional Virtual Assistant Services",
   description: "Professional virtual assistant services to help you grow your business. Streamline operations, manage ecommerce stores, support Amazon sellers, and more.",
+  verification: {
+    google: "YOUR_VERIFICATION_CODE_HERE",
+  },
+  openGraph: {
+    title: "XpertVA - Professional Virtual Assistant Services",
+    description: "Professional virtual assistant services to help you grow your business.",
+    url: "https://www.siznex.com",
+    siteName: "XpertVA",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
