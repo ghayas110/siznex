@@ -55,6 +55,8 @@ function AnimatedNumber({ value, inView, suffix }: any) {
 
 export default function TeamPage() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const videoRef = useRef<HTMLVideoElement>(null);
+
 
   return (
     <div className="bg-black text-white mt-10">
@@ -131,8 +133,10 @@ export default function TeamPage() {
 
            <div className="w-full mt-12 sm:mt-16 md:mt-20 mx-auto mb-8">
             <video
+            ref={videoRef}
             autoPlay
             loop
+            muted
             playsInline
             onClick={(e) => {
               const v = e.currentTarget as HTMLVideoElement;

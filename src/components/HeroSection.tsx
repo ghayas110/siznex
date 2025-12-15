@@ -1,16 +1,19 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const words = ['BSR Optimization', 'Brand Awareness', 'Keyword Ranking', 'Market Places'];
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
     }, 2000);
+
+   
 
     return () => clearInterval(timer);
   }, []);
@@ -31,8 +34,10 @@ const HeroSection = () => {
         {/* Video */}
         <div className="w-full mt-12 sm:mt-16 md:mt-20 mx-auto">
             <video
+            ref={videoRef}
             autoPlay
             loop
+            muted
             playsInline
             onClick={(e) => {
               const v = e.currentTarget as HTMLVideoElement;

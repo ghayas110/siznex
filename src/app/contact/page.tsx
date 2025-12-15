@@ -12,25 +12,39 @@ export default function ContactPage() {
           <p className="text-sm text-gray-400 mb-8">
             Fill out the following to get your project started
           </p>
-          <form className="space-y-6 w-full max-w-md">
+          <form 
+            action="mailto:hello@xpertva.com" 
+            method="post" 
+            encType="text/plain" 
+            className="space-y-6 w-full max-w-md"
+          >
             <div>
               <input
+                id="name"
+                name="name"
                 type="text"
                 placeholder="Your name*"
+                required
                 className="w-full bg-transparent border-b border-gray-600 focus:outline-none py-3 placeholder-gray-400 text-sm"
               />
             </div>
             <div>
               <input
+                id="email"
+                name="email"
                 type="email"
                 placeholder="Email*"
+                required
                 className="w-full bg-transparent border-b border-gray-600 focus:outline-none py-3 placeholder-gray-400 text-sm"
               />
             </div>
             <div>
               <textarea
+                id="message"
+                name="message"
                 rows={4}
                 placeholder="Tell us about your project..."
+                required
                 className="w-full bg-transparent border-b border-gray-600 focus:outline-none py-3 placeholder-gray-400 text-sm resize-none"
               ></textarea>
             </div>

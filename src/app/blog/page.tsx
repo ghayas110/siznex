@@ -77,7 +77,7 @@ export default function Blog() {
                     src={featuredPost.image}
                     alt={featuredPost.title}
                     fill
-                    className="object-contain object-left-top transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-left-top transition-transform duration-500 group-hover:scale-105"
                     priority
                   />
                 </div>

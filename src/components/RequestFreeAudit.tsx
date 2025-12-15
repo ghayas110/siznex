@@ -1,13 +1,18 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import ModalAudit from './ModalAudit';
+
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 const RequestFreeAudit = () => {
   const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
        <section className="py-24 text-center bg-gradient-to-b from-[#1a1a1a] to-[#0b0b0b] border-t border-[#222]">
           <motion.h2 className="text-4xl font-bold mb-4" initial="hidden" whileInView="visible" variants={fadeUp}>
@@ -21,15 +26,17 @@ const RequestFreeAudit = () => {
           >
             Let our experts manage your operations, communication, and ecommerce tasks while you focus on scaling your business.
           </motion.p>
-          <motion.a
-            // href="#contact"
-            className="bg-orange-300 text-black px-10 py-4 rounded-xl text-lg font-semibold hover:opacity-80 transition shadow-xl inline-block"
+          <motion.button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-orange-300 text-black px-10 py-4 rounded-xl text-lg font-semibold hover:opacity-80 transition shadow-xl inline-block cursor-pointer"
             initial="hidden"
             whileInView="visible"
             variants={fadeUp}
           >
             Request Free Audit
-          </motion.a>
+          </motion.button>
+
+          {isModalOpen && <ModalAudit onClose={() => setIsModalOpen(false)} />}
         </section>
   )
 };
