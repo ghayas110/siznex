@@ -215,7 +215,7 @@ Tried running ads yourself ? Been burned ? Or thinking about trying PPC for the 
     slug: `stop-struggling-start-scaling-amazon-account-management`,
     date: `December 15, 2025`,
     category: `Amazon Account Management`,
-    image: `/AmazonAccountManagmrnt.png`,
+    image: `/1st-quarter.jpg`,
     description: `Is running your Amazon store taking over your life? Discover how partnering with experts like XpertVA can turn your overwhelming daily grind into a scalable, profitable empire. The promise of selling on Amazon is intoxicating. Access to millions of ready-to-buy customers, the efficiency of FBA (Fulfillment by Amazon), and the potential for massive scalability draw thousands of entrepreneurs to the platform every day.
 
 But then, reality hits.
@@ -346,7 +346,7 @@ Book your free consultation today! Start growing your Amazon store with expert s
     slug: "reporting-amazon-listing-violation",
     date: "December 27, 2025",
     category: "Amazon Seller Central",
-    image: "report.png",
+    image: "/reports.png",
     description: `Amazon sellers face the challenge of ensuring their listings comply with the platform's policies. When violations are detected, sellers must take prompt action to address them. This guide will walk you through the process of reporting listing violations on Amazon Seller Central, helping you maintain compliance and protect your business.
 
 Step-by-Step Guide
