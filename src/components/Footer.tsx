@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         {/* Center Column - Links */}
-        <div className="flex-[2] grid grid-cols-2 gap-6 text-white">
+        <div className="flex-[2] grid grid-cols-2 gap-8 md:gap-6 text-white">
           <ul className="space-y-2">
             {[
 

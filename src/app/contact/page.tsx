@@ -5,7 +5,7 @@ import React from 'react';
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white flex items-center justify-center px-4 sm:px-6 py-12 sm:py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl w-full">
         {/* Left Form */}
         <div className="mt-16 sm:mt-0">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-2">Lets Talk!</h2>

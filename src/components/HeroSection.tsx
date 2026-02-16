@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="w-full mt-10">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-7xl font-light mb-8 leading-snug md:leading-tight">
-         A complete suite of digital solutions 
+         A complete suite of digital solutions {" "} 
           <br className="hidden md:block" />
           designed to grow {' '}
           <span className="text-indigo-500 font-medium transition-all duration-500">
